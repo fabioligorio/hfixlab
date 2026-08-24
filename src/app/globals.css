@@ -1191,46 +1191,50 @@ button {
 }
 
 .service-menu {
-  display: grid;
-  grid-template-columns: minmax(0, 0.95fr) minmax(360px, 0.9fr);
-  gap: 18px;
-  align-items: stretch;
+  display: block;
 }
 
 .service-menu-list {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
 }
 
-.service-menu-item {
-  min-width: 0;
-  min-height: 118px;
-  display: grid;
-  grid-template-columns: 58px minmax(0, 1fr);
-  gap: 14px;
-  align-items: center;
+.service-accordion {
+  overflow: hidden;
   border: 1px solid rgba(201, 205, 211, 0.16);
   border-radius: 14px;
-  padding: 16px;
   background:
-    linear-gradient(145deg, rgba(21, 155, 255, 0.08), transparent 54%),
-    rgba(17, 21, 28, 0.7);
+    linear-gradient(145deg, rgba(21, 155, 255, 0.07), transparent 54%),
+    rgba(17, 21, 28, 0.68);
+}
+
+.service-accordion.is-open {
+  border-color: rgba(21, 155, 255, 0.42);
+  background:
+    linear-gradient(145deg, rgba(8, 103, 242, 0.2), transparent 58%),
+    rgba(17, 21, 28, 0.9);
+}
+
+.service-menu-item {
+  width: 100%;
+  min-width: 0;
+  min-height: 94px;
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr) 34px;
+  gap: 14px;
+  align-items: center;
+  border: 0;
+  padding: 18px;
+  background: transparent;
   color: var(--text-primary);
   text-align: left;
   transition:
     background 180ms ease,
-    border-color 180ms ease,
     transform 180ms ease;
 }
 
-.service-menu-item:hover,
-.service-menu-item.is-active {
-  border-color: rgba(21, 155, 255, 0.42);
-  background:
-    linear-gradient(145deg, rgba(8, 103, 242, 0.22), transparent 62%),
-    rgba(17, 21, 28, 0.9);
-  transform: translateY(-1px);
+.service-menu-item:hover {
+  background: rgba(8, 103, 242, 0.1);
 }
 
 .service-menu-item span:last-child {
@@ -1251,22 +1255,46 @@ button {
   line-height: 1.45;
 }
 
-.service-detail {
-  min-width: 0;
+.service-menu-item em {
+  width: 34px;
+  height: 34px;
   display: grid;
-  grid-template-rows: minmax(220px, 1fr) auto;
+  place-items: center;
+  border: 1px solid rgba(21, 155, 255, 0.3);
+  border-radius: 999px;
+  color: var(--brand-highlight);
+  font-style: normal;
+  font-size: 1.25rem;
+  line-height: 1;
+  transition: transform 180ms ease;
+}
+
+.service-accordion.is-open .service-menu-item em {
+  transform: rotate(180deg);
+}
+
+.service-accordion-panel {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.55fr) minmax(0, 1fr);
   gap: 18px;
-  border: 1px solid rgba(21, 155, 255, 0.24);
-  border-radius: 16px;
-  padding: 18px;
-  background:
-    radial-gradient(circle at 80% 10%, rgba(21, 155, 255, 0.16), transparent 38%),
-    rgba(17, 21, 28, 0.72);
-  box-shadow: 0 22px 68px rgba(0, 0, 0, 0.26);
+  align-items: center;
+  border-top: 1px solid rgba(201, 205, 211, 0.14);
+  padding: 0 18px 18px 90px;
+}
+
+.service-accordion-panel div:last-child {
+  display: grid;
+  gap: 14px;
+}
+
+.service-accordion-panel p {
+  margin: 0;
+  color: var(--brand-silver);
+  line-height: 1.65;
 }
 
 .service-detail-image {
-  min-height: 220px;
+  min-height: 190px;
   display: grid;
   place-items: center;
   overflow: hidden;
@@ -1279,32 +1307,6 @@ button {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.service-detail div:last-child {
-  display: grid;
-  gap: 12px;
-}
-
-.service-detail span {
-  color: var(--brand-highlight);
-  font-size: 0.76rem;
-  font-weight: 900;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.service-detail h3 {
-  margin: 0;
-  font-family: Manrope, Inter, Arial, sans-serif;
-  font-size: clamp(1.7rem, 3vw, 2.3rem);
-  line-height: 1;
-}
-
-.service-detail p {
-  margin: 0;
-  color: var(--brand-silver);
-  line-height: 1.65;
 }
 
 .brand-strip {
@@ -1822,13 +1824,8 @@ fieldset {
   .trust-grid,
   .metric-grid,
   .contact-grid,
-  .express-service-grid,
-  .service-menu {
+  .express-service-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .service-menu {
-    grid-template-columns: 1fr;
   }
 
   .split-heading,
@@ -1870,15 +1867,6 @@ fieldset {
   .express-service {
     grid-template-columns: 58px 1fr 18px;
     min-height: 138px;
-  }
-
-  .service-detail {
-    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr);
-    grid-template-rows: none;
-  }
-
-  .service-detail-image {
-    min-height: 260px;
   }
 
   .brand-strip {
@@ -1959,8 +1947,7 @@ fieldset {
   .trust-grid,
   .metric-grid,
   .contact-grid,
-  .express-service-grid,
-  .service-menu-list {
+  .express-service-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1982,12 +1969,12 @@ fieldset {
   }
 
   .service-menu {
-    gap: 14px;
+    display: block;
   }
 
   .service-menu-item {
-    min-height: 104px;
-    grid-template-columns: 54px minmax(0, 1fr);
+    min-height: 92px;
+    grid-template-columns: 54px minmax(0, 1fr) 32px;
     gap: 12px;
     padding: 14px;
   }
@@ -1996,10 +1983,10 @@ fieldset {
     font-size: 0.82rem;
   }
 
-  .service-detail {
+  .service-accordion-panel {
     grid-template-columns: 1fr;
     gap: 14px;
-    padding: 14px;
+    padding: 0 14px 14px;
   }
 
   .service-detail-image {

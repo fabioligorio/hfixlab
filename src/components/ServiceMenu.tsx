@@ -72,40 +72,46 @@ const services = [
 
 export function ServiceMenu() {
   const [activeId, setActiveId] = useState(services[0].id);
-  const active = services.find((service) => service.id === activeId) ?? services[0];
 
   return (
     <div className="service-menu">
       <div className="service-menu-list" aria-label="Menu de serviços">
-        {services.map((service) => (
-          <button
-            className={`service-menu-item ${active.id === service.id ? "is-active" : ""}`}
-            key={service.id}
-            onClick={() => setActiveId(service.id)}
-            type="button"
-          >
-            <span className={`service-icon ${service.id}`} aria-hidden="true" />
-            <span>
-              <strong>{service.title}</strong>
-              <small>{service.summary}</small>
-            </span>
-          </button>
-        ))}
+        {services.map((service) => {
+          const isActive = activeId === service.id;
+
+          return (
+            <article className={`service-accordion ${isActive ? "is-open" : ""}`} key={service.id}>
+              <button
+                aria-expanded={isActive}
+                className="service-menu-item"
+                onClick={() => setActiveId(isActive ? "" : service.id)}
+                type="button"
+              >
+                <span className={`service-icon ${service.id}`} aria-hidden="true" />
+                <span>
+                  <strong>{service.title}</strong>
+                  <small>{service.summary}</small>
+                </span>
+                <em aria-hidden="true">⌄</em>
+              </button>
+              {isActive ? (
+                <div className="service-accordion-panel">
+                  <div className="service-detail-image">
+                    <Image src={service.image} alt="" width={460} height={320} />
+                  </div>
+                  <div>
+                    <p>{service.description}</p>
+                    <a className="button button-primary compact" href="/solicitar-reparo">
+                      <span aria-hidden="true">+</span>
+                      Agendar este serviço
+                    </a>
+                  </div>
+                </div>
+              ) : null}
+            </article>
+          );
+        })}
       </div>
-      <article className="service-detail">
-        <div className="service-detail-image">
-          <Image src={active.image} alt="" width={460} height={320} />
-        </div>
-        <div>
-          <span>Serviço selecionado</span>
-          <h3>{active.title}</h3>
-          <p>{active.description}</p>
-          <a className="button button-primary compact" href="/solicitar-reparo">
-            <span aria-hidden="true">+</span>
-            Agendar este serviço
-          </a>
-        </div>
-      </article>
     </div>
   );
 }
