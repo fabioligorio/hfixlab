@@ -5,12 +5,16 @@ export function BrandMark() {
   return (
     <Link className="brand-mark" href="/" aria-label="HFix Lab">
       <Image
-        src="/images/hfix-logo-simple.png"
-        alt="HFix Lab"
-        width={252}
-        height={128}
+        src="/images/hfix-symbol-transparent.png"
+        alt=""
+        width={367}
+        height={407}
         priority
       />
+      <span>
+        <strong>HFix</strong>
+        <em>Lab</em>
+      </span>
     </Link>
   );
 }

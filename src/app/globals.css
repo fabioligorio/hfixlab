@@ -76,13 +76,36 @@ button {
 .brand-mark {
   display: inline-flex;
   align-items: center;
+  gap: 10px;
   min-width: max-content;
 }
 
 .brand-mark img {
-  width: 132px;
-  height: auto;
+  width: 48px;
+  height: 48px;
   object-fit: contain;
+}
+
+.brand-mark span {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  color: var(--text-primary);
+  font-family: Manrope, Inter, Arial, sans-serif;
+  font-size: 1.18rem;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.brand-mark strong,
+.brand-mark em {
+  font-style: normal;
+  font-weight: 900;
+}
+
+.brand-mark em {
+  color: var(--brand-highlight);
 }
 
 .desktop-nav {
@@ -518,6 +541,18 @@ button {
   z-index: 1;
 }
 
+.cracked-screen-photo {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.94;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
 .screen-repaired {
   z-index: 2;
   clip-path: inset(0 0 100% 0);
@@ -526,62 +561,6 @@ button {
 
 .screen-repaired img {
   display: block;
-}
-
-.crack {
-  position: absolute;
-  z-index: 2;
-  width: 3px;
-  border-radius: 999px;
-  background: rgba(247, 249, 252, 0.78);
-  box-shadow:
-    0 0 0 1px rgba(0, 0, 0, 0.45),
-    0 0 18px rgba(255, 255, 255, 0.28);
-  transform-origin: top;
-}
-
-.crack::before,
-.crack::after {
-  position: absolute;
-  content: "";
-  top: 52%;
-  left: 0;
-  width: 2px;
-  height: 92px;
-  border-radius: 999px;
-  background: inherit;
-  transform-origin: top;
-}
-
-.crack::before {
-  transform: rotate(42deg);
-}
-
-.crack::after {
-  transform: rotate(-36deg);
-}
-
-.crack-one {
-  top: 80px;
-  left: 46%;
-  height: 300px;
-  transform: rotate(12deg);
-}
-
-.crack-two {
-  top: 118px;
-  left: 29%;
-  height: 220px;
-  transform: rotate(-24deg);
-  opacity: 0.78;
-}
-
-.crack-three {
-  top: 172px;
-  right: 24%;
-  height: 260px;
-  transform: rotate(28deg);
-  opacity: 0.68;
 }
 
 .screen-scan-line {
@@ -1592,7 +1571,12 @@ fieldset {
   }
 
   .brand-mark img {
-    width: 116px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .brand-mark span {
+    font-size: 1rem;
   }
 
   .hero {

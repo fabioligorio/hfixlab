@@ -63,9 +63,14 @@ export function DeviceVisual() {
         <div className="iphone-screen">
           <div className="screen-state screen-cracked" aria-hidden="true">
             <IPhoneHomeScreen />
-            <div className="crack crack-one" />
-            <div className="crack crack-two" />
-            <div className="crack crack-three" />
+            <Image
+              className="cracked-screen-photo"
+              src="/images/iphone-cracked-realistic.png"
+              alt=""
+              width={882}
+              height={1792}
+              priority
+            />
           </div>
           <div className="screen-state screen-repaired" aria-hidden="true">
             <IPhoneHomeScreen fixed />
