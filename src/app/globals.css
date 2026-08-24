@@ -243,135 +243,198 @@ button {
   width: min(320px, 76vw);
   aspect-ratio: 0.52;
   overflow: hidden;
-  border: 1px solid rgba(201, 205, 211, 0.24);
-  border-radius: 38px;
+  border: 1px solid rgba(201, 205, 211, 0.3);
+  border-radius: 42px;
   background:
-    linear-gradient(rgba(21, 155, 255, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(21, 155, 255, 0.08) 1px, transparent 1px),
-    linear-gradient(160deg, #171d27 0%, #090c12 100%);
-  background-size: 32px 32px, 32px 32px, auto;
+    linear-gradient(145deg, rgba(255, 255, 255, 0.1), transparent 18%),
+    linear-gradient(160deg, #151923 0%, #05070b 100%);
   box-shadow: var(--shadow);
+  padding: 18px;
 }
 
 .device-speaker {
-  width: 88px;
-  height: 8px;
-  margin: 24px auto 0;
+  position: absolute;
+  top: 26px;
+  left: 50%;
+  z-index: 4;
+  width: 86px;
+  height: 7px;
+  transform: translateX(-50%);
   border-radius: 999px;
-  background: #313a49;
+  background: rgba(201, 205, 211, 0.24);
 }
 
-.device-logo-orbit {
+.iphone-screen {
   position: relative;
-  width: calc(100% - 52px);
-  min-height: 132px;
-  display: grid;
-  place-items: center;
-  margin: 42px auto 0;
-  border: 1px solid rgba(21, 155, 255, 0.18);
-  border-radius: 22px;
-  background:
-    radial-gradient(circle at 50% 42%, rgba(21, 155, 255, 0.2), transparent 58%),
-    rgba(7, 9, 13, 0.54);
-  box-shadow: inset 0 0 44px rgba(8, 103, 242, 0.16);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid rgba(21, 155, 255, 0.16);
+  border-radius: 30px;
+  background: #05070b;
 }
 
-.device-logo-orbit::before,
-.device-logo-orbit::after {
+.iphone-screen::before {
   position: absolute;
   content: "";
-  inset: 18px;
-  border: 1px solid rgba(21, 155, 255, 0.18);
-  border-radius: 18px;
+  inset: 0;
+  z-index: 3;
+  background:
+    linear-gradient(rgba(21, 155, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(21, 155, 255, 0.07) 1px, transparent 1px);
+  background-size: 30px 30px;
+  pointer-events: none;
 }
 
-.device-logo-orbit::after {
-  inset: 32px;
-  border-color: rgba(201, 205, 211, 0.14);
+.screen-state {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
 }
 
-.device-logo-orbit img {
-  position: relative;
+.screen-wallpaper {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 32% 18%, rgba(239, 68, 68, 0.38), transparent 28%),
+    radial-gradient(circle at 76% 70%, rgba(8, 103, 242, 0.28), transparent 34%),
+    linear-gradient(145deg, #090b10 0%, #151923 54%, #05070b 100%);
+}
+
+.screen-wallpaper.repaired {
+  background:
+    radial-gradient(circle at 50% 24%, rgba(21, 155, 255, 0.54), transparent 32%),
+    radial-gradient(circle at 72% 76%, rgba(34, 197, 94, 0.24), transparent 30%),
+    linear-gradient(145deg, #07111f 0%, #0b1524 52%, #05070b 100%);
+}
+
+.screen-cracked {
   z-index: 1;
+}
+
+.screen-repaired {
+  z-index: 2;
+  clip-path: inset(0 0 100% 0);
+  animation: repairReveal 4.2s ease-in-out infinite;
+}
+
+.screen-repaired img {
+  position: relative;
+  z-index: 2;
   width: min(210px, 82%);
   height: auto;
   filter: drop-shadow(0 0 18px rgba(21, 155, 255, 0.28));
 }
 
-.diagnostic-card {
-  margin: 22px 26px 0;
-  padding: 18px;
-  border: 1px solid var(--line);
-  border-radius: 16px;
+.screen-alert {
+  position: absolute;
+  right: 18px;
+  bottom: 22px;
+  z-index: 4;
+  border: 1px solid rgba(239, 68, 68, 0.34);
+  border-radius: 999px;
+  padding: 8px 12px;
   background: rgba(7, 9, 13, 0.72);
+  color: #fecaca;
+  font-size: 0.78rem;
+  font-weight: 800;
+  animation: crackedLabel 4.2s ease-in-out infinite;
 }
 
-.diagnostic-card span,
-.floating-panel small,
+.screen-alert.fixed {
+  border-color: rgba(34, 197, 94, 0.36);
+  color: #bbf7d0;
+  opacity: 0;
+  animation: fixedLabel 4.2s ease-in-out infinite;
+}
+
+.crack {
+  position: absolute;
+  z-index: 2;
+  width: 3px;
+  border-radius: 999px;
+  background: rgba(247, 249, 252, 0.78);
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.45),
+    0 0 18px rgba(255, 255, 255, 0.28);
+  transform-origin: top;
+}
+
+.crack::before,
+.crack::after {
+  position: absolute;
+  content: "";
+  top: 52%;
+  left: 0;
+  width: 2px;
+  height: 92px;
+  border-radius: 999px;
+  background: inherit;
+  transform-origin: top;
+}
+
+.crack::before {
+  transform: rotate(42deg);
+}
+
+.crack::after {
+  transform: rotate(-36deg);
+}
+
+.crack-one {
+  top: 80px;
+  left: 46%;
+  height: 300px;
+  transform: rotate(12deg);
+}
+
+.crack-two {
+  top: 118px;
+  left: 29%;
+  height: 220px;
+  transform: rotate(-24deg);
+  opacity: 0.78;
+}
+
+.crack-three {
+  top: 172px;
+  right: 24%;
+  height: 260px;
+  transform: rotate(28deg);
+  opacity: 0.68;
+}
+
+.screen-scan-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -4px;
+  z-index: 5;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, var(--brand-highlight), transparent);
+  box-shadow:
+    0 0 26px var(--brand-highlight),
+    0 22px 54px rgba(21, 155, 255, 0.26);
+  animation: screenScan 4.2s ease-in-out infinite;
+}
+
+.screen-scan-line::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  top: 4px;
+  height: 92px;
+  background: linear-gradient(180deg, rgba(21, 155, 255, 0.18), transparent);
+}
+
 .metric-card span,
 .os-card span,
 .os-card small {
   display: block;
   color: var(--text-secondary);
   font-size: 0.82rem;
-}
-
-.diagnostic-card strong {
-  display: block;
-  margin-top: 8px;
-  font-family: Manrope, Inter, Arial, sans-serif;
-  font-size: 1.55rem;
-}
-
-.scan-line {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 49%;
-  height: 2px;
-  background: var(--brand-highlight);
-  box-shadow: 0 0 34px var(--brand-highlight);
-  animation: scan 3s ease-in-out infinite;
-}
-
-.diagnostic-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-  margin: 28px 26px 0;
-}
-
-.diagnostic-grid span {
-  height: 58px;
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.045);
-}
-
-.floating-panel {
-  position: absolute;
-  width: 210px;
-  padding: 16px;
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  background: rgba(17, 21, 28, 0.9);
-  box-shadow: var(--shadow);
-  z-index: 2;
-}
-
-.floating-panel strong {
-  display: block;
-  margin-top: 6px;
-}
-
-.floating-panel.top {
-  top: 62px;
-  right: 0;
-}
-
-.floating-panel.bottom {
-  left: 0;
-  bottom: 58px;
 }
 
 .section {
@@ -874,13 +937,53 @@ fieldset {
   color: var(--text-secondary);
 }
 
-@keyframes scan {
-  0%,
-  100% {
-    transform: translateY(-120px);
+@keyframes screenScan {
+  0% {
+    top: -4px;
   }
-  50% {
-    transform: translateY(120px);
+  45%,
+  55% {
+    top: 100%;
+  }
+  100% {
+    top: -4px;
+  }
+}
+
+@keyframes repairReveal {
+  0% {
+    clip-path: inset(0 0 100% 0);
+  }
+  45%,
+  55% {
+    clip-path: inset(0 0 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 100% 0);
+  }
+}
+
+@keyframes crackedLabel {
+  0%,
+  34%,
+  100% {
+    opacity: 1;
+  }
+  45%,
+  72% {
+    opacity: 0;
+  }
+}
+
+@keyframes fixedLabel {
+  0%,
+  34%,
+  100% {
+    opacity: 0;
+  }
+  45%,
+  72% {
+    opacity: 1;
   }
 }
 
@@ -965,13 +1068,6 @@ fieldset {
     grid-template-columns: 1fr;
   }
 
-  .floating-panel {
-    position: static;
-    width: 100%;
-    max-width: 340px;
-    margin: 12px auto 0;
-  }
-
   .device-visual {
     display: block;
     min-height: unset;
@@ -982,13 +1078,17 @@ fieldset {
     margin: 0 auto;
   }
 
-  .device-logo-orbit {
-    min-height: 112px;
-    margin-top: 28px;
+  .device-frame {
+    width: min(300px, 88vw);
+    padding: 14px;
   }
 
-  .diagnostic-card {
-    margin-top: 16px;
+  .iphone-screen {
+    border-radius: 26px;
+  }
+
+  .screen-repaired img {
+    width: min(190px, 82%);
   }
 
   .warranty-panel dl {

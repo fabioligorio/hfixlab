@@ -2,39 +2,30 @@ import Image from "next/image";
 
 export function DeviceVisual() {
   return (
-    <div className="device-visual" aria-label="Painel visual de diagnostico tecnico">
+    <div className="device-visual" aria-label="Animacao de tela de iPhone reparada">
       <div className="device-frame">
         <div className="device-speaker" />
-        <div className="device-logo-orbit" aria-hidden="true">
-          <Image
-            src="/images/hfix-logo-simple.png"
-            alt=""
-            width={252}
-            height={128}
-            priority
-          />
+        <div className="iphone-screen">
+          <div className="screen-state screen-cracked" aria-hidden="true">
+            <div className="screen-wallpaper" />
+            <div className="crack crack-one" />
+            <div className="crack crack-two" />
+            <div className="crack crack-three" />
+          </div>
+          <div className="screen-state screen-repaired" aria-hidden="true">
+            <div className="screen-wallpaper repaired" />
+            <Image
+              src="/images/hfix-logo-simple.png"
+              alt=""
+              width={252}
+              height={128}
+              priority
+            />
+          </div>
+          <div className="screen-alert">Tela trincada</div>
+          <div className="screen-alert fixed">Tela consertada</div>
+          <div className="screen-scan-line" aria-hidden="true" />
         </div>
-        <div className="diagnostic-card primary">
-          <span>OS HF-2026-00001</span>
-          <strong>Em diagnostico</strong>
-        </div>
-        <div className="scan-line" />
-        <div className="diagnostic-grid">
-          <span />
-          <span />
-          <span />
-          <span />
-          <span />
-          <span />
-        </div>
-      </div>
-      <div className="floating-panel top">
-        <small>Teste aprovado</small>
-        <strong>Display + touch</strong>
-      </div>
-      <div className="floating-panel bottom">
-        <small>Prazo estimado</small>
-        <strong>24h</strong>
       </div>
     </div>
   );
