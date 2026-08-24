@@ -80,7 +80,6 @@ export default function Home() {
 
       <section className="section" id="servicos">
         <div className="shell">
-          <div className="section-kicker">O que a gente conserta</div>
           <div className="service-showcase">
             <div className="service-intro">
               <div className="service-pill">

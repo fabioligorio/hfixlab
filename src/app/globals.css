@@ -878,24 +878,29 @@ button {
 .service-pill {
   width: max-content;
   max-width: 100%;
-  min-height: 42px;
+  min-height: 52px;
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  border: 1px solid rgba(201, 205, 211, 0.22);
+  gap: 14px;
+  border: 1px solid rgba(21, 155, 255, 0.42);
   border-radius: 999px;
-  padding: 0 20px;
-  color: var(--brand-silver);
-  background: rgba(255, 255, 255, 0.035);
-  font-size: 0.78rem;
+  padding: 0 24px;
+  color: var(--text-primary);
+  background:
+    linear-gradient(135deg, rgba(8, 103, 242, 0.22), rgba(255, 255, 255, 0.04)),
+    rgba(7, 9, 13, 0.72);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 18px 48px rgba(8, 103, 242, 0.18);
+  font-size: 0.92rem;
   font-weight: 900;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 .service-pill span {
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   border-radius: 999px;
   background: var(--brand-primary);
   box-shadow: 0 0 24px var(--brand-highlight);
@@ -1710,9 +1715,11 @@ fieldset {
   }
 
   .service-pill {
-    min-height: 38px;
-    padding-inline: 14px;
-    font-size: 0.66rem;
+    min-height: 48px;
+    justify-content: center;
+    padding-inline: 18px;
+    font-size: 0.74rem;
+    text-align: center;
   }
 
   .service-intro h2 {
