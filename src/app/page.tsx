@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { DeviceVisual } from "@/components/DeviceVisual";
 import { PageChrome } from "@/components/PageChrome";
 
@@ -13,30 +15,27 @@ const repairServices = [
 ];
 
 const brands = [
-  ["apple", "Apple"],
-  ["samsung", "SAMSUNG"],
-  ["motorola", "motorola"],
-  ["xiaomi", "mi"],
-  ["lenovo", "Lenovo"],
-  ["asus", "ASUS"],
-  ["more", "e mais"],
+  ["apple", "Apple", "/images/brands/apple.svg"],
+  ["samsung", "Samsung", "/images/brands/samsung.svg"],
+  ["motorola", "Motorola", "/images/brands/motorola.svg"],
+  ["xiaomi", "Xiaomi", "/images/brands/xiaomi.svg"],
+  ["lenovo", "Lenovo", "/images/brands/lenovo.svg"],
+  ["asus", "ASUS", "/images/brands/asus.svg"],
+  ["more", "Outras marcas", "/images/brands/more.svg"],
 ];
 
 const attendance = [
   [
-    "01",
     "Coleta programada",
     "Buscamos seu aparelho, registramos a entrada e levamos ao laboratorio para diagnostico.",
     "Solicitar coleta",
   ],
   [
-    "02",
     "Atendimento no local",
     "Quando o reparo permitir, o tecnico vai ate voce e executa o procedimento com praticidade.",
     "Agendar visita",
   ],
   [
-    "03",
     "Laboratorio HFix",
     "Para reparos complexos, microsolda, testes e garantia, o aparelho segue o processo completo.",
     "Conhecer processo",
@@ -81,7 +80,7 @@ export default function Home() {
 
       <section className="section" id="servicos">
         <div className="shell">
-          <div className="section-kicker">01 — O que a gente conserta</div>
+          <div className="section-kicker">O que a gente conserta</div>
           <div className="service-showcase">
             <div className="service-intro">
               <div className="service-pill">
@@ -135,9 +134,10 @@ export default function Home() {
           </div>
           <div className="brand-strip">
             <span>{String.raw`// Trabalhamos com`}</span>
-            {brands.map(([brandClass, brand]) => (
+            {brands.map(([brandClass, brand, logo]) => (
               <strong className={`brand-logo ${brandClass}`} key={brand}>
-                {brand}
+                <Image src={logo} alt="" width={132} height={42} />
+                <span>{brand}</span>
               </strong>
             ))}
           </div>
@@ -146,7 +146,7 @@ export default function Home() {
 
       <section className="section surface-band" id="atendimento">
         <div className="shell">
-          <div className="section-kicker">02 — Atendimento</div>
+          <div className="section-kicker">Atendimento</div>
           <div className="section-heading split-heading">
             <h2>Escolha como prefere ser atendido.</h2>
             <p>
@@ -155,9 +155,8 @@ export default function Home() {
             </p>
           </div>
           <div className="attendance-grid">
-            {attendance.map(([number, title, text, action]) => (
+            {attendance.map(([title, text, action]) => (
               <a className="attendance-card" href="/solicitar-reparo" key={title}>
-                <span>{number}</span>
                 <h3>{title}</h3>
                 <p>{text}</p>
                 <strong>{action}</strong>
@@ -170,7 +169,7 @@ export default function Home() {
       <section className="section contact-section" id="contato">
         <div className="shell split">
           <div>
-            <div className="section-kicker">03 — Onde nos encontrar</div>
+            <div className="section-kicker">Onde nos encontrar</div>
             <h2>Chame a HFix Lab e resolva sem complicacao.</h2>
             <p>
               Passe as informacoes do aparelho, escolha a melhor modalidade de

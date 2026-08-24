@@ -639,17 +639,37 @@ button {
 }
 
 .section-kicker {
+  width: max-content;
+  max-width: 100%;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   margin-bottom: 18px;
+  border: 1px solid rgba(21, 155, 255, 0.28);
+  border-radius: 999px;
+  padding: 9px 14px;
   color: var(--brand-highlight);
+  background: rgba(8, 103, 242, 0.1);
   font-weight: 900;
   text-transform: uppercase;
-  font-size: 0.82rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+}
+
+.section-kicker::before {
+  width: 8px;
+  height: 8px;
+  content: "";
+  border-radius: 999px;
+  background: var(--brand-highlight);
+  box-shadow: 0 0 18px rgba(21, 155, 255, 0.9);
 }
 
 .section-heading h2,
 .split h2,
 .page-hero h1 {
   font-size: clamp(2rem, 5vw, 3.6rem);
+  font-weight: 900;
   line-height: 1.02;
 }
 
@@ -999,7 +1019,7 @@ button {
   display: grid;
   place-items: center;
   border: 1px solid rgba(21, 155, 255, 0.22);
-  border-radius: 15px;
+  border-radius: 999px;
   background:
     radial-gradient(circle at 34% 22%, rgba(255, 255, 255, 0.28), transparent 28%),
     linear-gradient(145deg, rgba(21, 155, 255, 0.25), rgba(8, 103, 242, 0.08));
@@ -1048,7 +1068,7 @@ button {
 
 .brand-strip {
   display: grid;
-  grid-template-columns: 230px repeat(7, minmax(0, 1fr));
+  grid-template-columns: 220px repeat(7, minmax(0, 1fr));
   align-items: center;
   gap: 14px;
   border: 1px solid rgba(201, 205, 211, 0.16);
@@ -1058,7 +1078,7 @@ button {
   background: rgba(17, 21, 28, 0.58);
 }
 
-.brand-strip span {
+.brand-strip > span {
   border-right: 1px solid var(--line);
   color: var(--brand-highlight);
   font-size: 0.82rem;
@@ -1066,47 +1086,32 @@ button {
 }
 
 .brand-logo {
-  min-height: 42px;
+  position: relative;
+  min-height: 48px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0 8px;
+  min-width: 0;
+  padding: 0 6px;
   color: var(--brand-silver);
   font-weight: 900;
   letter-spacing: 0;
 }
 
-.brand-logo.apple {
-  font-family: Georgia, serif;
-  font-size: 1.05rem;
+.brand-logo img {
+  display: block;
+  width: min(100%, 132px);
+  height: 42px;
+  object-fit: contain;
 }
 
-.brand-logo.samsung,
-.brand-logo.asus {
-  letter-spacing: 0.12em;
-}
-
-.brand-logo.motorola {
-  font-style: italic;
-}
-
-.brand-logo.xiaomi {
-  width: 48px;
-  min-width: 48px;
-  border-radius: 8px;
-  background: #f97316;
-  color: white;
-  font-size: 1.08rem;
-}
-
-.brand-logo.lenovo {
-  border-radius: 8px;
-  color: #ef4444;
-  font-size: 1.2rem;
-}
-
-.brand-logo.more {
-  color: var(--text-secondary);
+.brand-logo span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
 }
 
 .attendance-grid {
@@ -1116,7 +1121,7 @@ button {
 }
 
 .attendance-card {
-  min-height: 310px;
+  min-height: 270px;
   display: flex;
   flex-direction: column;
   border: 1px solid var(--line);
@@ -1125,16 +1130,12 @@ button {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.065), rgba(255, 255, 255, 0.025));
 }
 
-.attendance-card span {
-  color: var(--brand-highlight);
-  font-weight: 900;
-  font-size: 1.2rem;
-}
-
 .attendance-card h3 {
-  margin: 34px 0 12px;
+  margin: 0 0 12px;
   font-family: Manrope, Inter, Arial, sans-serif;
-  font-size: 1.5rem;
+  color: var(--text-primary);
+  font-size: 1.58rem;
+  font-weight: 900;
 }
 
 .attendance-card p {
@@ -1514,12 +1515,14 @@ fieldset {
   }
 
   .brand-strip {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .brand-strip span {
+  .brand-strip > span {
     grid-column: 1 / -1;
     border-right: 0;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 12px;
   }
 
   .step-grid,
@@ -1571,7 +1574,6 @@ fieldset {
   }
 
   .brand-strip {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
     padding: 20px;
   }
 
@@ -1601,6 +1603,13 @@ fieldset {
     padding: 56px 0;
   }
 
+  .section-kicker {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.7rem;
+  }
+
   .hero-logo {
     width: min(270px, 100%);
     margin-bottom: 18px;
@@ -1626,6 +1635,48 @@ fieldset {
   .contact-grid,
   .express-service-grid {
     grid-template-columns: 1fr;
+  }
+
+  .section-heading,
+  .split-heading {
+    margin-bottom: 28px;
+  }
+
+  .split-heading p,
+  .service-intro p,
+  .contact-section p {
+    font-size: 0.96rem;
+  }
+
+  .express-service {
+    grid-template-columns: 54px minmax(0, 1fr) 18px;
+    gap: 12px 14px;
+    padding: 18px;
+  }
+
+  .service-icon {
+    width: 54px;
+    height: 54px;
+  }
+
+  .brand-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    padding: 18px;
+  }
+
+  .brand-logo {
+    min-height: 46px;
+  }
+
+  .brand-logo img {
+    max-width: 112px;
+    height: 36px;
+  }
+
+  .attendance-card {
+    min-height: auto;
+    padding: 22px;
   }
 
   .device-visual {

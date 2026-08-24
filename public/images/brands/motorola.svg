@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 54" role="img" aria-label="Motorola">
+  <rect width="220" height="54" fill="none"/>
+  <circle cx="29" cy="27" r="18" fill="#f7f9fc"/>
+  <path fill="#07090d" d="m16.5 36 6.7-20.1L29 28.8l5.8-12.9L41.5 36h-6.2l-2.2-7.7-4.1 8.1-4.1-8.1-2.2 7.7h-6.2Z"/>
+  <text x="57" y="34" fill="#f7f9fc" font-family="Inter, Arial, sans-serif" font-size="23" font-weight="700">motorola</text>
+</svg>

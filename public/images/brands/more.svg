@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 54" role="img" aria-label="Outras marcas">
+  <rect width="170" height="54" fill="none"/>
+  <circle cx="24" cy="27" r="5" fill="#159bff"/>
+  <circle cx="42" cy="27" r="5" fill="#159bff"/>
+  <circle cx="60" cy="27" r="5" fill="#159bff"/>
+  <text x="78" y="34" fill="#159bff" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="900">e mais</text>
+</svg>
