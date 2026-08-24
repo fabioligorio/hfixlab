@@ -2,17 +2,25 @@ import { DeviceVisual } from "@/components/DeviceVisual";
 import { PageChrome } from "@/components/PageChrome";
 
 const repairServices = [
-  ["Conserto de Smartphones", "Diagnostico tecnico"],
-  ["Troca de Tela", "Reparo no mesmo fluxo"],
-  ["Troca de Bateria", "Pecas selecionadas"],
-  ["Conector de Carga", "Atendimento express"],
-  ["Vidro Frontal", "Acabamento preciso"],
-  ["Vidro Traseiro", "Linha premium"],
-  ["Alto-falante & Mic", "Reparo fino"],
-  ["Microsolda", "Diagnostico avancado"],
+  ["SM", "Conserto de Smartphones", "Diagnostico tecnico"],
+  ["TL", "Troca de Tela", "Reparo no mesmo fluxo"],
+  ["BT", "Troca de Bateria", "Pecas selecionadas"],
+  ["US", "Conector de Carga", "Atendimento express"],
+  ["VF", "Vidro Frontal", "Acabamento preciso"],
+  ["VT", "Vidro Traseiro", "Linha premium"],
+  ["AU", "Alto-falante & Mic", "Reparo fino"],
+  ["MS", "Microsolda", "Diagnostico avancado"],
 ];
 
-const brands = ["Apple", "Samsung", "Motorola", "Xiaomi", "Lenovo", "Asus", "e mais"];
+const brands = [
+  ["apple", "Apple"],
+  ["samsung", "SAMSUNG"],
+  ["motorola", "motorola"],
+  ["xiaomi", "mi"],
+  ["lenovo", "Lenovo"],
+  ["asus", "ASUS"],
+  ["more", "e mais"],
+];
 
 const attendance = [
   [
@@ -82,10 +90,11 @@ export default function Home() {
             </p>
           </div>
           <div className="express-service-grid">
-            {repairServices.map(([title, subtitle]) => (
+            {repairServices.map(([icon, title, subtitle]) => (
               <a className="express-service" href="/solicitar-reparo" key={title}>
+                <span className="service-icon" aria-hidden="true">{icon}</span>
                 <strong>{title}</strong>
-                <span>· {subtitle}</span>
+                <small>{subtitle}</small>
               </a>
             ))}
           </div>
@@ -95,8 +104,10 @@ export default function Home() {
           </p>
           <div className="brand-strip">
             <span>{String.raw`// Trabalhamos com`}</span>
-            {brands.map((brand) => (
-              <strong key={brand}>{brand}</strong>
+            {brands.map(([brandClass, brand]) => (
+              <strong className={`brand-logo ${brandClass}`} key={brand}>
+                {brand}
+              </strong>
             ))}
           </div>
         </div>
