@@ -1,8 +1,19 @@
+import Image from "next/image";
+
 export function DeviceVisual() {
   return (
     <div className="device-visual" aria-label="Painel visual de diagnostico tecnico">
       <div className="device-frame">
         <div className="device-speaker" />
+        <div className="device-logo-orbit" aria-hidden="true">
+          <Image
+            src="/images/hfix-logo-simple.png"
+            alt=""
+            width={252}
+            height={128}
+            priority
+          />
+        </div>
         <div className="diagnostic-card primary">
           <span>OS HF-2026-00001</span>
           <strong>Em diagnostico</strong>
@@ -28,4 +39,3 @@ export function DeviceVisual() {
     </div>
   );
 }
-

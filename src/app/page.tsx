@@ -1,5 +1,4 @@
 import { DeviceVisual } from "@/components/DeviceVisual";
-import Image from "next/image";
 import { PageChrome } from "@/components/PageChrome";
 
 const repairServices = [
@@ -58,14 +57,6 @@ export default function Home() {
       <section className="hero express-hero">
         <div className="shell hero-grid">
           <div className="hero-copy">
-            <Image
-              className="hero-logo"
-              src="/images/hfix-logo-simple.png"
-              alt="HFix Lab"
-              width={504}
-              height={256}
-              priority
-            />
             <p className="eyebrow">Atendimento express · coleta e laboratorio</p>
             <h1>Seu aparelho nas maos certas. Rapido, claro e com garantia.</h1>
             <p className="lead">

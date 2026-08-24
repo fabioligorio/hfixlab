@@ -70,7 +70,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
+  gap: 20px;
 }
 
 .brand-mark {
@@ -88,9 +88,9 @@ button {
 .desktop-nav {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 16px;
   color: var(--text-secondary);
-  font-size: 0.92rem;
+  font-size: 0.88rem;
 }
 
 .desktop-nav a:hover {
@@ -149,7 +149,7 @@ button {
 .hero-grid,
 .split {
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1fr);
+  grid-template-columns: minmax(0, 0.95fr) minmax(360px, 0.9fr);
   gap: 48px;
   align-items: center;
 }
@@ -167,8 +167,8 @@ button {
 
 .hero-copy h1 {
   max-width: 720px;
-  font-size: clamp(2.9rem, 6.4vw, 5.8rem);
-  line-height: 0.94;
+  font-size: clamp(2.55rem, 5vw, 4.7rem);
+  line-height: 0.96;
 }
 
 .hero-logo {
@@ -198,8 +198,8 @@ button {
   margin: 22px 0 0;
   max-width: 720px;
   color: var(--text-primary);
-  font-size: clamp(1.45rem, 3vw, 2.35rem);
-  line-height: 1.15;
+  font-size: clamp(1.3rem, 2.35vw, 1.95rem);
+  line-height: 1.18;
 }
 
 .hero-copy p:not(.eyebrow, .lead),
@@ -232,14 +232,15 @@ button {
 
 .device-visual {
   position: relative;
-  min-height: 560px;
+  min-height: 530px;
   display: grid;
   place-items: center;
+  isolation: isolate;
 }
 
 .device-frame {
   position: relative;
-  width: min(340px, 76vw);
+  width: min(320px, 76vw);
   aspect-ratio: 0.52;
   overflow: hidden;
   border: 1px solid rgba(201, 205, 211, 0.24);
@@ -260,8 +261,45 @@ button {
   background: #313a49;
 }
 
+.device-logo-orbit {
+  position: relative;
+  width: calc(100% - 52px);
+  min-height: 132px;
+  display: grid;
+  place-items: center;
+  margin: 42px auto 0;
+  border: 1px solid rgba(21, 155, 255, 0.18);
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(21, 155, 255, 0.2), transparent 58%),
+    rgba(7, 9, 13, 0.54);
+  box-shadow: inset 0 0 44px rgba(8, 103, 242, 0.16);
+}
+
+.device-logo-orbit::before,
+.device-logo-orbit::after {
+  position: absolute;
+  content: "";
+  inset: 18px;
+  border: 1px solid rgba(21, 155, 255, 0.18);
+  border-radius: 18px;
+}
+
+.device-logo-orbit::after {
+  inset: 32px;
+  border-color: rgba(201, 205, 211, 0.14);
+}
+
+.device-logo-orbit img {
+  position: relative;
+  z-index: 1;
+  width: min(210px, 82%);
+  height: auto;
+  filter: drop-shadow(0 0 18px rgba(21, 155, 255, 0.28));
+}
+
 .diagnostic-card {
-  margin: 64px 26px 0;
+  margin: 22px 26px 0;
   padding: 18px;
   border: 1px solid var(--line);
   border-radius: 16px;
@@ -289,7 +327,7 @@ button {
   position: absolute;
   left: 0;
   right: 0;
-  top: 48%;
+  top: 49%;
   height: 2px;
   background: var(--brand-highlight);
   box-shadow: 0 0 34px var(--brand-highlight);
@@ -300,7 +338,7 @@ button {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
-  margin: 48px 26px 0;
+  margin: 28px 26px 0;
 }
 
 .diagnostic-grid span {
@@ -318,6 +356,7 @@ button {
   border-radius: 16px;
   background: rgba(17, 21, 28, 0.9);
   box-shadow: var(--shadow);
+  z-index: 2;
 }
 
 .floating-panel strong {
@@ -326,13 +365,13 @@ button {
 }
 
 .floating-panel.top {
-  top: 70px;
+  top: 62px;
   right: 0;
 }
 
 .floating-panel.bottom {
   left: 0;
-  bottom: 82px;
+  bottom: 58px;
 }
 
 .section {
@@ -904,7 +943,9 @@ fieldset {
   }
 
   .device-visual {
-    min-height: 460px;
+    min-height: 520px;
+    width: min(540px, 100%);
+    margin-inline: auto;
   }
 
   .step-grid,
@@ -941,7 +982,20 @@ fieldset {
   }
 
   .hero {
-    padding-top: 36px;
+    padding: 34px 0 54px;
+  }
+
+  .hero-logo {
+    width: min(270px, 100%);
+    margin-bottom: 18px;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(2.45rem, 12vw, 3.25rem);
+  }
+
+  .lead {
+    font-size: 1.22rem;
   }
 
   .actions,
@@ -963,16 +1017,27 @@ fieldset {
   .floating-panel {
     position: static;
     width: 100%;
-    margin-top: 10px;
+    max-width: 340px;
+    margin: 12px auto 0;
   }
 
   .device-visual {
     display: block;
     min-height: unset;
+    margin-top: 28px;
   }
 
   .device-frame {
     margin: 0 auto;
+  }
+
+  .device-logo-orbit {
+    min-height: 112px;
+    margin-top: 28px;
+  }
+
+  .diagnostic-card {
+    margin-top: 16px;
   }
 
   .warranty-panel dl {
