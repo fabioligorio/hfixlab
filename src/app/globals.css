@@ -1757,8 +1757,17 @@ fieldset {
     width: min(100% - 22px, 1120px);
   }
 
+  .header-inner {
+    min-height: 70px;
+    gap: 12px;
+  }
+
   .site-header .button {
-    display: none;
+    min-height: 38px;
+    flex: 0 0 auto;
+    padding-inline: 12px;
+    border-radius: 10px;
+    font-size: 0.82rem;
   }
 
   .brand-mark img {
@@ -1801,6 +1810,10 @@ fieldset {
   .actions,
   .button {
     width: 100%;
+  }
+
+  .site-header .button {
+    width: auto;
   }
 
   .step-grid,
