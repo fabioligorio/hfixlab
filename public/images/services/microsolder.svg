@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 320" role="img" aria-label="Microsolda">
+  <rect width="460" height="320" rx="24" fill="#08111d"/>
+  <rect x="78" y="68" width="224" height="176" rx="18" fill="#0f172a" stroke="#159bff" stroke-opacity=".55" stroke-width="3"/>
+  <rect x="136" y="116" width="76" height="76" rx="12" fill="#111827" stroke="#c9cdd3" stroke-opacity=".45"/>
+  <path d="M92 104h36M92 140h36M92 176h36M92 212h36M224 104h64M224 140h64M224 176h64M224 212h64" stroke="#159bff" stroke-opacity=".7" stroke-width="6" stroke-linecap="round"/>
+  <path d="M330 64l54 54-120 120-54 16 16-54L346 80Z" fill="#111827" stroke="#c9cdd3" stroke-opacity=".65" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M265 237l-39-39M348 82l54 54" stroke="#159bff" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="228" cy="200" r="10" fill="#159bff"/>
+</svg>

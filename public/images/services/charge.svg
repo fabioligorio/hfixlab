@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 320" role="img" aria-label="Conector de carga">
+  <rect width="460" height="320" rx="24" fill="#08111d"/>
+  <rect x="150" y="48" width="160" height="224" rx="28" fill="#101926" stroke="#4b5563" stroke-width="3"/>
+  <rect x="188" y="220" width="84" height="18" rx="6" fill="#c9cdd3" fill-opacity=".2" stroke="#159bff"/>
+  <path d="M230 124l-24 44h31l-14 44 46-60h-32l18-28h-25Z" fill="#159bff"/>
+  <path d="M105 238h70M355 238h-70" stroke="#159bff" stroke-width="8" stroke-linecap="round"/>
+  <rect x="78" y="218" width="38" height="40" rx="8" fill="#111827" stroke="#c9cdd3" stroke-opacity=".5"/>
+  <rect x="344" y="218" width="38" height="40" rx="8" fill="#111827" stroke="#c9cdd3" stroke-opacity=".5"/>
+</svg>

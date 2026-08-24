@@ -2,17 +2,7 @@ import Image from "next/image";
 
 import { DeviceVisual } from "@/components/DeviceVisual";
 import { PageChrome } from "@/components/PageChrome";
-
-const repairServices = [
-  ["phone", "Conserto de Smartphones", "Diagnóstico técnico completo e reparos especializados."],
-  ["screen", "Troca de Tela", "Reparo no mesmo fluxo, com peças de alta qualidade."],
-  ["battery", "Troca de Bateria", "Peças selecionadas para máxima durabilidade."],
-  ["charge", "Conector de Carga", "Atendimento express com testes completos."],
-  ["glass", "Vidro Frontal", "Acabamento preciso com máxima proteção."],
-  ["back", "Vidro Traseiro", "Linha premium para manter seu aparelho como novo."],
-  ["audio", "Alto-falante & Mic", "Reparo fino para som claro e sem falhas."],
-  ["solder", "Microsolda", "Diagnóstico avançado em nível de placa."],
-];
+import { ServiceMenu } from "@/components/ServiceMenu";
 
 const brands = [
   ["apple", "Apple", "/images/brands/apple.svg"],
@@ -121,16 +111,7 @@ export default function Home() {
               diagnóstico, registro da OS e aprovação antes do reparo.
             </p>
           </div>
-          <div className="express-service-grid">
-            {repairServices.map(([icon, title, subtitle]) => (
-              <a className="express-service" href="/solicitar-reparo" key={title}>
-                <span className={`service-icon ${icon}`} aria-hidden="true" />
-                <strong>{title}</strong>
-                <small>{subtitle}</small>
-                <em aria-hidden="true">→</em>
-              </a>
-            ))}
-          </div>
+          <ServiceMenu />
           <div className="brand-strip">
             <span>{String.raw`// Trabalhamos com`}</span>
             {brands.map(([brandClass, brand, logo]) => (

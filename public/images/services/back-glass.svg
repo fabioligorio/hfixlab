@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 320" role="img" aria-label="Vidro traseiro">
+  <rect width="460" height="320" rx="24" fill="#08111d"/>
+  <rect x="138" y="40" width="184" height="240" rx="34" fill="#111827" stroke="#c9cdd3" stroke-opacity=".5" stroke-width="4"/>
+  <circle cx="188" cy="94" r="18" fill="#061528" stroke="#159bff" stroke-width="4"/>
+  <circle cx="233" cy="94" r="18" fill="#061528" stroke="#159bff" stroke-width="4"/>
+  <circle cx="188" cy="139" r="18" fill="#061528" stroke="#159bff" stroke-width="4"/>
+  <path d="M161 207h138M178 230h104" stroke="#159bff" stroke-opacity=".55" stroke-width="8" stroke-linecap="round"/>
+  <path d="M126 75l208 168M334 75L126 243" stroke="#f7f9fc" stroke-opacity=".28" stroke-width="3"/>
+</svg>

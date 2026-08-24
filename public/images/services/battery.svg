@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 320" role="img" aria-label="Troca de bateria">
+  <rect width="460" height="320" rx="24" fill="#08111d"/>
+  <rect x="108" y="84" width="230" height="132" rx="22" fill="#111827" stroke="#c9cdd3" stroke-opacity=".45" stroke-width="4"/>
+  <rect x="342" y="124" width="22" height="52" rx="8" fill="#c9cdd3" fill-opacity=".45"/>
+  <rect x="128" y="104" width="124" height="92" rx="14" fill="#0867f2"/>
+  <path d="M196 72v32M196 196v52M258 160h54M285 133v54" stroke="#159bff" stroke-width="10" stroke-linecap="round"/>
+  <path d="M142 240h174" stroke="#159bff" stroke-opacity=".35" stroke-width="4" stroke-linecap="round"/>
+</svg>

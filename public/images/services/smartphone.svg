@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 320" role="img" aria-label="Conserto de smartphone">
+  <rect width="460" height="320" rx="24" fill="#08111d"/>
+  <path d="M42 232h376" stroke="#159bff" stroke-opacity=".16"/>
+  <rect x="150" y="38" width="160" height="244" rx="28" fill="#101926" stroke="#4b5563" stroke-width="3"/>
+  <rect x="169" y="66" width="122" height="184" rx="18" fill="#061528" stroke="#159bff" stroke-opacity=".35"/>
+  <circle cx="230" cy="260" r="7" fill="#253244"/>
+  <path d="M186 126h88M186 154h64M186 182h88" stroke="#159bff" stroke-width="8" stroke-linecap="round"/>
+  <path d="M108 116l22 22 44-52M340 118h54M367 91v54" stroke="#c9cdd3" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="116" cy="247" r="20" fill="#0867f2" fill-opacity=".18" stroke="#159bff"/>
+  <circle cx="344" cy="247" r="20" fill="#0867f2" fill-opacity=".18" stroke="#159bff"/>
+</svg>

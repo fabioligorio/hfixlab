@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 320" role="img" aria-label="Vidro frontal">
+  <rect width="460" height="320" rx="24" fill="#08111d"/>
+  <rect x="125" y="42" width="210" height="236" rx="30" fill="#061528" stroke="#159bff" stroke-width="4"/>
+  <path d="M154 88h152M154 126h152M154 164h152M154 202h152" stroke="#159bff" stroke-opacity=".2" stroke-width="8" stroke-linecap="round"/>
+  <path d="M132 58l190 204M320 58L138 252" stroke="#f7f9fc" stroke-opacity=".32" stroke-width="3"/>
+  <path d="M92 112h42M326 112h42M92 216h42M326 216h42" stroke="#159bff" stroke-width="7" stroke-linecap="round"/>
+</svg>

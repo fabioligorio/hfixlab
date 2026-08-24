@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 320" role="img" aria-label="Troca de tela">
+  <rect width="460" height="320" rx="24" fill="#08111d"/>
+  <rect x="88" y="42" width="134" height="232" rx="24" fill="#111827" stroke="#c9cdd3" stroke-opacity=".45" stroke-width="3"/>
+  <rect x="238" y="42" width="134" height="232" rx="24" fill="#061528" stroke="#159bff" stroke-width="4"/>
+  <path d="M119 98l64 88M186 103l-72 100M126 224l74-72" stroke="#f7f9fc" stroke-opacity=".62" stroke-width="3"/>
+  <path d="M270 108h70M270 144h70M270 180h70" stroke="#159bff" stroke-width="9" stroke-linecap="round"/>
+  <path d="M224 160h14" stroke="#159bff" stroke-width="8" stroke-linecap="round"/>
+  <path d="M229 145l18 15-18 15" fill="none" stroke="#159bff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
