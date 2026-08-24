@@ -4,7 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "HFix Lab",
     short_name: "HFix",
-    description: "Assistencia tecnica com coleta, reparo, rastreio e garantia.",
+    description: "Assistência técnica com coleta, reparo, rastreio e garantia.",
     start_url: "/",
     display: "standalone",
     background_color: "#07090D",
@@ -18,4 +18,3 @@ export default function manifest(): MetadataRoute.Manifest {
     ],
   };
 }
-

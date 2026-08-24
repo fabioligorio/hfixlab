@@ -5,8 +5,8 @@ export default function CustomerDashboardPage() {
     <main className="app-screen">
       <section className="app-panel">
         <p className="eyebrow">PWA do cliente</p>
-        <h1>Ola, Fabio.</h1>
-        <p>Acompanhe reparos, garantias e orcamentos em um unico lugar.</p>
+        <h1>Olá, Fabio.</h1>
+        <p>Acompanhe reparos, garantias e orçamentos em um único lugar.</p>
         <div className="actions">
           <a className="button button-primary" href="/solicitar-reparo">
             <span aria-hidden="true">+</span>
@@ -19,10 +19,9 @@ export default function CustomerDashboardPage() {
         </div>
       </section>
       <section className="app-panel">
-        <h2>Ultima OS</h2>
+        <h2>Última OS</h2>
         <Timeline />
       </section>
     </main>
   );
 }
-

@@ -1,22 +1,22 @@
 const metrics = [
   ["Coletas hoje", "06"],
   ["Novas OS", "14"],
-  ["Em diagnostico", "08"],
-  ["Aguardando aprovacao", "05"],
+  ["Em diagnóstico", "08"],
+  ["Aguardando aprovação", "05"],
   ["Em reparo", "11"],
   ["Prontos", "03"],
   ["Faturamento", "R$ 8,4k"],
-  ["Ticket medio", "R$ 420"],
+  ["Ticket médio", "R$ 420"],
 ];
 
-const columns = ["Entrada", "Diagnostico", "Orcamento", "Reparo", "Testes", "Entrega"];
+const columns = ["Entrada", "Diagnóstico", "Orçamento", "Reparo", "Testes", "Entrega"];
 
 export default function AdminDashboardPage() {
   return (
     <main className="admin-screen">
       <section>
         <p className="eyebrow">Painel interno</p>
-        <h1>Operacao HFix Lab</h1>
+        <h1>Operação HFix Lab</h1>
       </section>
       <section className="metric-grid">
         {metrics.map(([label, value]) => (
@@ -41,4 +41,3 @@ export default function AdminDashboardPage() {
     </main>
   );
 }
-

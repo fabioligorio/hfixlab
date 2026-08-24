@@ -6,9 +6,9 @@ export default function ServicesPage() {
   return (
     <PageChrome>
       <SectionHero
-        eyebrow="Servicos"
-        title="Reparos especializados com diagnostico antes da aprovacao."
-        text="A HFix Lab atende aparelhos eletronicos com rastreio de entrada, fotos, orcamento digital e testes de qualidade."
+        eyebrow="Serviços"
+        title="Reparos especializados com diagnóstico antes da aprovação."
+        text="A HFix Lab atende aparelhos eletrônicos com rastreio de entrada, fotos, orçamento digital e testes de qualidade."
       />
       <section className="section">
         <div className="shell">
@@ -18,4 +18,3 @@ export default function ServicesPage() {
     </PageChrome>
   );
 }
-

@@ -7,14 +7,14 @@ export default function TrackPage() {
     <PageChrome>
       <SectionHero
         eyebrow="Acompanhar reparo"
-        title="Consulte a ordem de servico e veja o status atual."
-        text="A linha do tempo abaixo representa a experiencia do cliente para rastrear diagnostico, orcamento, reparo e entrega."
+        title="Consulte a ordem de serviço e veja o status atual."
+        text="A linha do tempo abaixo representa a experiência do cliente para rastrear diagnóstico, orçamento, reparo e entrega."
       />
       <section className="section">
         <div className="shell split">
           <form className="tracking-box">
             <label>
-              Codigo da OS
+              Código da OS
               <input defaultValue="HF-2026-00001" />
             </label>
             <button className="button button-primary" type="button">
@@ -28,4 +28,3 @@ export default function TrackPage() {
     </PageChrome>
   );
 }
-

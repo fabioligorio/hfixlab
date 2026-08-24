@@ -162,7 +162,7 @@ button {
   min-height: calc(100svh - 76px);
   display: grid;
   align-items: center;
-  padding: 54px 0 64px;
+  padding: 42px 0 56px;
 }
 
 .express-hero {
@@ -175,6 +175,16 @@ button {
   grid-template-columns: minmax(0, 0.95fr) minmax(360px, 0.9fr);
   gap: 48px;
   align-items: center;
+}
+
+.hero-phone-layout {
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 0;
+}
+
+.hero-phone-layout .hero-copy {
+  display: none;
 }
 
 .hero-copy h1,
@@ -261,6 +271,11 @@ button {
   isolation: isolate;
 }
 
+.hero-device {
+  width: min(100%, 620px);
+  min-height: 662px;
+}
+
 .device-frame {
   position: relative;
   width: min(320px, 76vw);
@@ -273,6 +288,20 @@ button {
     linear-gradient(160deg, #151923 0%, #05070b 100%);
   box-shadow: var(--shadow);
   padding: 18px;
+}
+
+.hero-device .device-frame {
+  width: min(392px, 88vw);
+  border-radius: 54px;
+  padding: 20px;
+}
+
+.hero-device .device-speaker {
+  top: 30px;
+}
+
+.hero-device .iphone-screen {
+  border-radius: 38px;
 }
 
 .device-speaker {
@@ -328,6 +357,12 @@ button {
     linear-gradient(160deg, #061528 0%, #0a3b68 36%, #111827 62%, #05070b 100%);
 }
 
+.hero-device .iphone-home {
+  display: flex;
+  flex-direction: column;
+  padding: 42px 24px 26px;
+}
+
 .iphone-home::before {
   position: absolute;
   content: "";
@@ -376,6 +411,100 @@ button {
   width: min(160px, 76%);
   height: auto;
   filter: drop-shadow(0 0 18px rgba(21, 155, 255, 0.3));
+}
+
+.phone-hero-panel {
+  position: relative;
+  z-index: 3;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  padding: 22px 6px 8px;
+  color: var(--text-primary);
+}
+
+.phone-hero-panel p,
+.phone-hero-panel h2,
+.phone-hero-panel span {
+  margin: 0;
+}
+
+.phone-hero-panel p {
+  width: 100%;
+  max-width: 100%;
+  border: 1px solid rgba(21, 155, 255, 0.32);
+  border-radius: 999px;
+  padding: 8px 12px;
+  color: var(--brand-highlight);
+  background: rgba(7, 9, 13, 0.48);
+  font-size: 0.64rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  line-height: 1.35;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.phone-hero-panel h2 {
+  max-width: 304px;
+  font-family: Manrope, Inter, Arial, sans-serif;
+  font-size: clamp(2.3rem, 4.2vw, 3.25rem);
+  font-weight: 900;
+  line-height: 0.95;
+}
+
+.phone-hero-panel span {
+  max-width: 304px;
+  color: var(--brand-silver);
+  font-size: 0.92rem;
+  line-height: 1.48;
+}
+
+.phone-hero-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.phone-hero-actions a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(201, 205, 211, 0.18);
+  border-radius: 14px;
+  padding: 0 12px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-primary);
+  font-size: 0.82rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+.phone-hero-actions a:first-child {
+  border-color: rgba(21, 155, 255, 0.44);
+  background: var(--brand-primary);
+}
+
+.phone-hero-badges {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.phone-hero-badges small {
+  border: 1px solid rgba(201, 205, 211, 0.15);
+  border-radius: 999px;
+  padding: 8px 6px;
+  background: rgba(0, 0, 0, 0.22);
+  color: var(--brand-silver);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-align: center;
 }
 
 .app-grid {
@@ -537,6 +666,11 @@ button {
   backdrop-filter: blur(14px);
 }
 
+.hero-device .hero-app-grid,
+.hero-device .iphone-dock {
+  display: none;
+}
+
 .screen-cracked {
   z-index: 1;
 }
@@ -679,6 +813,7 @@ button {
 .service-card,
 .contact-card,
 .metric-card {
+  min-width: 0;
   padding: 22px;
 }
 
@@ -693,8 +828,10 @@ button {
 
 .step-card h3,
 .service-card h3 {
-  margin: 16px 0 8px;
+  margin: 14px 0 10px;
   font-family: Manrope, Inter, Arial, sans-serif;
+  font-size: 1.18rem;
+  line-height: 1.2;
 }
 
 .step-card p,
@@ -946,7 +1083,8 @@ button {
 
 .express-service {
   position: relative;
-  min-height: 150px;
+  min-width: 0;
+  min-height: 154px;
   display: grid;
   grid-template-columns: 60px 1fr 18px;
   align-content: start;
@@ -1049,7 +1187,7 @@ button {
   display: grid;
   grid-template-columns: 220px repeat(7, minmax(0, 1fr));
   align-items: center;
-  gap: 14px;
+  gap: 12px;
   border: 1px solid rgba(201, 205, 211, 0.16);
   border-radius: 16px;
   margin-top: 26px;
@@ -1100,6 +1238,7 @@ button {
 }
 
 .attendance-card {
+  min-width: 0;
   min-height: 270px;
   display: flex;
   flex-direction: column;
@@ -1142,6 +1281,7 @@ button {
 }
 
 .contact-panel {
+  min-width: 0;
   display: grid;
   gap: 18px;
   border: 1px solid var(--line);
@@ -1357,8 +1497,10 @@ fieldset {
 }
 
 .contact-card {
+  min-height: 172px;
   display: grid;
   gap: 12px;
+  align-content: start;
 }
 
 .app-screen,
@@ -1438,8 +1580,8 @@ fieldset {
   0% {
     top: -4px;
   }
-  45%,
-  55% {
+  42%,
+  78% {
     top: 100%;
   }
   100% {
@@ -1451,8 +1593,8 @@ fieldset {
   0% {
     clip-path: inset(0 0 100% 0);
   }
-  45%,
-  55% {
+  42%,
+  78% {
     clip-path: inset(0 0 0 0);
   }
   100% {
@@ -1473,10 +1615,53 @@ fieldset {
     grid-template-columns: 1fr;
   }
 
+  .hero-phone-layout {
+    justify-items: stretch;
+  }
+
+  .hero-phone-layout .hero-copy {
+    display: block;
+  }
+
   .device-visual {
     min-height: 520px;
     width: min(540px, 100%);
     margin-inline: auto;
+  }
+
+  .hero-device {
+    min-height: 520px;
+  }
+
+  .hero-device .device-frame {
+    width: min(320px, 76vw);
+    border-radius: 42px;
+    padding: 18px;
+  }
+
+  .hero-device .device-speaker {
+    top: 26px;
+  }
+
+  .hero-device .iphone-screen {
+    border-radius: 30px;
+  }
+
+  .hero-device .iphone-home {
+    display: block;
+    padding: 34px 16px 18px;
+  }
+
+  .phone-hero-panel {
+    display: none;
+  }
+
+  .hero-device .hero-app-grid {
+    display: grid;
+  }
+
+  .hero-device .iphone-dock {
+    display: grid;
   }
 
   .service-showcase {

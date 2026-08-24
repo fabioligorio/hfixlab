@@ -7,8 +7,8 @@ export default function HowItWorksPage() {
     <PageChrome>
       <SectionHero
         eyebrow="Como funciona"
-        title="Um fluxo simples para o cliente e organizado para o laboratorio."
-        text="A jornada cobre solicitacao, coleta, entrada, diagnostico, orcamento, aprovacao, reparo, testes, pagamento, entrega e garantia."
+        title="Um fluxo simples para o cliente e organizado para o laboratório."
+        text="A jornada cobre solicitação, coleta, entrada, diagnóstico, orçamento, aprovação, reparo, testes, pagamento, entrega e garantia."
       />
       <section className="section">
         <div className="shell step-grid">
@@ -24,4 +24,3 @@ export default function HowItWorksPage() {
     </PageChrome>
   );
 }
-

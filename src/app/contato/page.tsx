@@ -6,15 +6,15 @@ export default function ContactPage() {
     <PageChrome>
       <SectionHero
         eyebrow="Contato"
-        title="Fale com a HFix Lab para atendimento e orcamentos."
-        text="Centralize as entradas pelo site e direcione cada solicitacao para uma ordem de servico."
+        title="Fale com a HFix Lab para atendimento e orçamentos."
+        text="Centralize as entradas pelo site e direcione cada solicitação para uma ordem de serviço."
       />
       <section className="section">
         <div className="shell contact-grid">
           <a className="contact-card" href="https://wa.me/" target="_blank" rel="noreferrer">
             <span aria-hidden="true">☎</span>
             <strong>WhatsApp</strong>
-            <p>Atendimento rapido para novas solicitacoes.</p>
+            <p>Atendimento rápido para novas solicitações.</p>
           </a>
           <a className="contact-card" href="mailto:contato@hfixlab.com">
             <span aria-hidden="true">@</span>
@@ -31,4 +31,3 @@ export default function ContactPage() {
     </PageChrome>
   );
 }
-

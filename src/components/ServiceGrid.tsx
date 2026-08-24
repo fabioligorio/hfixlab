@@ -7,10 +7,9 @@ export function ServiceGrid() {
         <article className="service-card" key={service}>
           <span aria-hidden="true">+</span>
           <h3>{service}</h3>
-          <p>Diagnostico tecnico, registro da OS e aprovacao antes do reparo.</p>
+          <p>Diagnóstico técnico, registro da OS e aprovação antes do reparo.</p>
         </article>
       ))}
     </div>
   );
 }
-

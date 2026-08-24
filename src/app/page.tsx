@@ -4,14 +4,14 @@ import { DeviceVisual } from "@/components/DeviceVisual";
 import { PageChrome } from "@/components/PageChrome";
 
 const repairServices = [
-  ["phone", "Conserto de Smartphones", "Diagnostico tecnico completo e reparos especializados."],
-  ["screen", "Troca de Tela", "Reparo no mesmo fluxo, com pecas de alta qualidade."],
-  ["battery", "Troca de Bateria", "Pecas selecionadas para maxima durabilidade."],
+  ["phone", "Conserto de Smartphones", "Diagnóstico técnico completo e reparos especializados."],
+  ["screen", "Troca de Tela", "Reparo no mesmo fluxo, com peças de alta qualidade."],
+  ["battery", "Troca de Bateria", "Peças selecionadas para máxima durabilidade."],
   ["charge", "Conector de Carga", "Atendimento express com testes completos."],
-  ["glass", "Vidro Frontal", "Acabamento preciso com maxima protecao."],
+  ["glass", "Vidro Frontal", "Acabamento preciso com máxima proteção."],
   ["back", "Vidro Traseiro", "Linha premium para manter seu aparelho como novo."],
   ["audio", "Alto-falante & Mic", "Reparo fino para som claro e sem falhas."],
-  ["solder", "Microsolda", "Diagnostico avancado em nivel de placa."],
+  ["solder", "Microsolda", "Diagnóstico avançado em nível de placa."],
 ];
 
 const brands = [
@@ -27,12 +27,12 @@ const brands = [
 const attendance = [
   [
     "Coleta programada",
-    "Buscamos seu aparelho, registramos a entrada e levamos ao laboratorio para diagnostico.",
+    "Buscamos seu aparelho, registramos a entrada e levamos ao laboratório para diagnóstico.",
     "Solicitar coleta",
   ],
   [
     "Atendimento no local",
-    "Quando o reparo permitir, o tecnico vai ate voce e executa o procedimento com praticidade.",
+    "Quando o reparo permitir, o técnico vai até você e executa o procedimento com praticidade.",
     "Agendar visita",
   ],
   [
@@ -46,17 +46,17 @@ export default function Home() {
   return (
     <PageChrome>
       <section className="hero express-hero">
-        <div className="shell hero-grid">
+        <div className="shell hero-grid hero-phone-layout">
           <div className="hero-copy">
-            <p className="eyebrow">Atendimento express · coleta e laboratorio</p>
-            <h1>Seu aparelho nas maos certas. Rapido, claro e com garantia.</h1>
+            <p className="eyebrow">Atendimento express · coleta e laboratório</p>
+            <h1>Seu aparelho nas mãos certas. Rápido, claro e com garantia.</h1>
             <p className="lead">
-              Assistencia tecnica especializada para celulares, tablets,
-              notebooks e eletronicos.
+              Assistência técnica especializada para celulares, tablets,
+              notebooks e eletrônicos.
             </p>
             <p>
-              Atendemos por coleta, no local ou em laboratorio. Voce solicita,
-              acompanha a OS, aprova o orcamento e recebe o aparelho testado.
+              Atendemos por coleta, no local ou em laboratório. Você solicita,
+              acompanha a OS, aprova o orçamento e recebe o aparelho testado.
             </p>
             <div className="actions">
               <a className="button button-primary" href="/solicitar-reparo">
@@ -65,16 +65,16 @@ export default function Home() {
               </a>
               <a className="button button-secondary" href="#servicos">
                 <span aria-hidden="true">⌕</span>
-                Conhecer servicos
+                Conhecer serviços
               </a>
             </div>
             <div className="hero-badges" aria-label="Diferenciais">
               <span>Atendimento express</span>
-              <span>Garantia no servico</span>
+              <span>Garantia no serviço</span>
               <span>Buscamos e entregamos</span>
             </div>
           </div>
-          <DeviceVisual />
+          <DeviceVisual variant="hero" />
         </div>
       </section>
 
@@ -85,19 +85,19 @@ export default function Home() {
             <div className="service-intro">
               <div className="service-pill">
                 <span aria-hidden="true" />
-                Assistencia tecnica especializada
+                Assistência técnica especializada
               </div>
               <h2>
                 Reparo completo para o seu <strong>aparelho.</strong>
               </h2>
               <p>
                 Trabalhamos com as principais marcas e defeitos, sempre com
-                diagnostico preciso, registro da OS e aprovacao antes do reparo.
+                diagnóstico preciso, registro da OS e aprovação antes do reparo.
               </p>
-              <div className="service-benefits" aria-label="Beneficios">
-                <span><i>◇</i>Garantia<br />ate 90 dias</span>
-                <span><i>◷</i>Agilidade<br />e precisao</span>
-                <span><i>▣</i>Seguranca<br />de dados</span>
+              <div className="service-benefits" aria-label="Benefícios">
+                <span><i>◇</i>Garantia<br />até 90 dias</span>
+                <span><i>◷</i>Agilidade<br />e precisão</span>
+                <span><i>▣</i>Segurança<br />de dados</span>
               </div>
             </div>
             <div className="repair-visual" aria-hidden="true">
@@ -119,7 +119,7 @@ export default function Home() {
             <h2>Reparo completo para o seu aparelho.</h2>
             <p>
               Trabalhamos com as principais marcas e defeitos, sempre com
-              diagnostico, registro da OS e aprovacao antes do reparo.
+              diagnóstico, registro da OS e aprovação antes do reparo.
             </p>
           </div>
           <div className="express-service-grid">
@@ -150,8 +150,8 @@ export default function Home() {
           <div className="section-heading split-heading">
             <h2>Escolha como prefere ser atendido.</h2>
             <p>
-              Tres modalidades para o seu jeito: coleta, atendimento no local
-              ou entrada em laboratorio para reparos mais complexos.
+              Três modalidades para o seu jeito: coleta, atendimento no local
+              ou entrada em laboratório para reparos mais complexos.
             </p>
           </div>
           <div className="attendance-grid">
@@ -172,8 +172,8 @@ export default function Home() {
             <div className="section-kicker">Onde nos encontrar</div>
             <h2>Chame a HFix Lab e resolva sem complicacao.</h2>
             <p>
-              Passe as informacoes do aparelho, escolha a melhor modalidade de
-              atendimento e acompanhe a OS ate a entrega.
+              Passe as informações do aparelho, escolha a melhor modalidade de
+              atendimento e acompanhe a OS até a entrega.
             </p>
           </div>
           <div className="contact-panel">
@@ -184,12 +184,12 @@ export default function Home() {
             <div>
               <span>WhatsApp · Telefone</span>
               <strong>A definir</strong>
-              <p>Resposta rapida no horario comercial.</p>
+              <p>Resposta rápida no horário comercial.</p>
             </div>
             <div>
-              <span>Horario de atendimento</span>
-              <strong>Segunda a Sabado</strong>
-              <p>Configure os horarios reais antes da publicacao final.</p>
+              <span>Horário de atendimento</span>
+              <strong>Segunda a Sábado</strong>
+              <p>Configure os horários reais antes da publicação final.</p>
             </div>
             <a className="button button-primary" href="/solicitar-reparo">
               <span aria-hidden="true">+</span>

@@ -2,12 +2,12 @@ export const services = [
   "Troca de tela",
   "Troca de bateria",
   "Conector de carga",
-  "Camera e audio",
-  "Danos por liquido",
+  "Câmera e áudio",
+  "Danos por líquido",
   "Software e sistema",
   "Reparo de placa",
   "Microsolda",
-  "Diagnostico avancado",
+  "Diagnóstico avançado",
 ];
 
 export const steps = [
@@ -17,20 +17,20 @@ export const steps = [
   },
   {
     title: "Reparamos",
-    text: "O laboratorio registra a entrada, diagnostica, envia o orcamento e executa o reparo aprovado.",
+    text: "O laboratório registra a entrada, diagnostica, envia o orçamento e executa o reparo aprovado.",
   },
   {
     title: "Entregamos",
-    text: "Depois dos testes e pagamento, a HFix Lab devolve o equipamento com garantia rastreavel.",
+    text: "Depois dos testes e pagamento, a HFix Lab devolve o equipamento com garantia rastreável.",
   },
 ];
 
 export const orderTimeline = [
-  "Solicitacao recebida",
+  "Solicitação recebida",
   "Coleta agendada",
-  "Recebido no laboratorio",
-  "Em diagnostico",
-  "Orcamento",
+  "Recebido no laboratório",
+  "Em diagnóstico",
+  "Orçamento",
   "Reparo",
   "Testes",
   "Entrega",
@@ -38,33 +38,32 @@ export const orderTimeline = [
 
 export const trustItems = [
   "Protocolo de coleta",
-  "Registro fotografico",
-  "Orcamento digital",
+  "Registro fotográfico",
+  "Orçamento digital",
   "Rastreamento da OS",
   "Garantia ativa",
-  "Historico do cliente",
+  "Histórico do cliente",
 ];
 
 export const faqs = [
   {
     question: "A HFix Lab busca o aparelho em casa?",
     answer:
-      "Sim. O fluxo foi pensado para coleta, diagnostico em laboratorio, reparo, testes e devolucao.",
+      "Sim. O fluxo foi pensado para coleta, diagnóstico em laboratório, reparo, testes e devolução.",
   },
   {
     question: "Consigo acompanhar o reparo?",
     answer:
-      "Sim. Cada ordem de servico recebe um codigo e uma linha do tempo com os principais status.",
+      "Sim. Cada ordem de serviço recebe um código e uma linha do tempo com os principais status.",
   },
   {
-    question: "O orcamento precisa ser aprovado?",
+    question: "O orçamento precisa ser aprovado?",
     answer:
-      "Sim. O reparo so avanca depois da aprovacao digital do cliente.",
+      "Sim. O reparo só avança depois da aprovação digital do cliente.",
   },
   {
-    question: "Quais marcas sao atendidas?",
+    question: "Quais marcas são atendidas?",
     answer:
-      "Apple, Samsung, Motorola, Xiaomi, Lenovo, ASUS e outros equipamentos eletronicos sob diagnostico.",
+      "Apple, Samsung, Motorola, Xiaomi, Lenovo, ASUS e outros equipamentos eletrônicos sob diagnóstico.",
   },
 ];
-

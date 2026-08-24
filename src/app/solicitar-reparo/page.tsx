@@ -1,15 +1,15 @@
 import { PageChrome } from "@/components/PageChrome";
 import { SectionHero } from "@/components/SectionHero";
 
-const problems = ["Tela", "Bateria", "Nao liga", "Nao carrega", "Camera", "Audio", "Liquido", "Software"];
+const problems = ["Tela", "Bateria", "Não liga", "Não carrega", "Câmera", "Áudio", "Líquido", "Software"];
 
 export default function RepairRequestPage() {
   return (
     <PageChrome>
       <SectionHero
         eyebrow="Solicitar reparo"
-        title="Abra uma solicitacao para coleta, diagnostico e orcamento."
-        text="Este MVP deixa o fluxo visual pronto para conectar com Supabase, WhatsApp e pagamentos na proxima etapa."
+        title="Abra uma solicitação para coleta, diagnóstico e orçamento."
+        text="O fluxo visual já está pronto para conectar WhatsApp, pagamentos e acompanhamento da OS na próxima etapa."
       />
       <section className="section">
         <form className="shell request-form">
@@ -50,8 +50,8 @@ export default function RepairRequestPage() {
             </div>
           </fieldset>
           <label className="wide">
-            Descricao do defeito
-            <textarea placeholder="Conte o que aconteceu, quando comecou e se ja houve tentativa de reparo." />
+            Descrição do defeito
+            <textarea placeholder="Conte o que aconteceu, quando começou e se já houve tentativa de reparo." />
           </label>
           <label>
             Tipo de atendimento
@@ -61,20 +61,19 @@ export default function RepairRequestPage() {
             </select>
           </label>
           <label>
-            Melhor horario
-            <select defaultValue="Manha">
-              <option>Manha</option>
+            Melhor horário
+            <select defaultValue="Manhã">
+              <option>Manhã</option>
               <option>Tarde</option>
               <option>Noite</option>
             </select>
           </label>
           <button className="button button-primary wide" type="button">
             <span aria-hidden="true">✓</span>
-            Confirmar solicitacao
+            Confirmar solicitação
           </button>
         </form>
       </section>
     </PageChrome>
   );
 }
-

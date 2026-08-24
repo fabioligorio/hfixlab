@@ -8,7 +8,7 @@ export function SiteFooter() {
         <div>
           <BrandMark />
           <p>
-            Assistencia tecnica especializada. Buscamos, reparamos e
+            Assistência técnica especializada. Buscamos, reparamos e
             entregamos.
           </p>
         </div>
@@ -20,7 +20,7 @@ export function SiteFooter() {
         </div>
         <div>
           <h2>Links</h2>
-          <Link href="/#servicos">Servicos</Link>
+          <Link href="/#servicos">Serviços</Link>
           <Link href="/#atendimento">Delivery</Link>
           <Link href="/#contato">Contato</Link>
         </div>
