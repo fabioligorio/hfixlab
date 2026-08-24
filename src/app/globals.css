@@ -1196,13 +1196,13 @@ button {
 
 .service-menu-list {
   display: grid;
-  gap: 12px;
+  gap: 8px;
 }
 
 .service-accordion {
   overflow: hidden;
   border: 1px solid rgba(201, 205, 211, 0.16);
-  border-radius: 14px;
+  border-radius: 12px;
   background:
     linear-gradient(145deg, rgba(21, 155, 255, 0.07), transparent 54%),
     rgba(17, 21, 28, 0.68);
@@ -1218,13 +1218,13 @@ button {
 .service-menu-item {
   width: 100%;
   min-width: 0;
-  min-height: 94px;
+  min-height: 72px;
   display: grid;
-  grid-template-columns: 58px minmax(0, 1fr) 34px;
-  gap: 14px;
+  grid-template-columns: 46px minmax(0, 1fr) 30px;
+  gap: 12px;
   align-items: center;
   border: 0;
-  padding: 18px;
+  padding: 12px 14px;
   background: transparent;
   color: var(--text-primary);
   text-align: left;
@@ -1237,34 +1237,52 @@ button {
   background: rgba(8, 103, 242, 0.1);
 }
 
-.service-menu-item span:last-child {
+.service-thumb {
+  width: 42px;
+  height: 42px;
   display: grid;
-  gap: 8px;
+  place-items: center;
+  border: 1px solid rgba(21, 155, 255, 0.22);
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 35% 20%, rgba(255, 255, 255, 0.24), transparent 30%),
+    rgba(8, 103, 242, 0.1);
+}
+
+.service-thumb img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.service-menu-item span:nth-child(2) {
+  display: grid;
+  gap: 4px;
   min-width: 0;
 }
 
 .service-menu-item strong {
   font-family: Manrope, Inter, Arial, sans-serif;
-  font-size: 1rem;
+  font-size: 0.96rem;
   line-height: 1.18;
 }
 
 .service-menu-item small {
   color: var(--text-secondary);
-  font-size: 0.84rem;
-  line-height: 1.45;
+  font-size: 0.78rem;
+  line-height: 1.35;
 }
 
 .service-menu-item em {
-  width: 34px;
-  height: 34px;
+  width: 30px;
+  height: 30px;
   display: grid;
   place-items: center;
   border: 1px solid rgba(21, 155, 255, 0.3);
   border-radius: 999px;
   color: var(--brand-highlight);
   font-style: normal;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   line-height: 1;
   transition: transform 180ms ease;
 }
@@ -1279,7 +1297,7 @@ button {
   gap: 18px;
   align-items: center;
   border-top: 1px solid rgba(201, 205, 211, 0.14);
-  padding: 0 18px 18px 90px;
+  padding: 0 14px 14px 72px;
 }
 
 .service-accordion-panel div:last-child {
@@ -1973,20 +1991,34 @@ fieldset {
   }
 
   .service-menu-item {
-    min-height: 92px;
-    grid-template-columns: 54px minmax(0, 1fr) 32px;
-    gap: 12px;
-    padding: 14px;
+    min-height: 70px;
+    grid-template-columns: 42px minmax(0, 1fr) 28px;
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .service-thumb {
+    width: 38px;
+    height: 38px;
+  }
+
+  .service-thumb img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .service-menu-item strong {
+    font-size: 0.92rem;
   }
 
   .service-menu-item small {
-    font-size: 0.82rem;
+    font-size: 0.74rem;
   }
 
   .service-accordion-panel {
     grid-template-columns: 1fr;
     gap: 14px;
-    padding: 0 14px 14px;
+    padding: 0 12px 12px;
   }
 
   .service-detail-image {

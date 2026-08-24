@@ -10,6 +10,7 @@ const services = [
     summary: "Diagnóstico técnico completo e reparos especializados.",
     description:
       "Avaliação do aparelho, testes funcionais, registro da OS e indicação clara do melhor reparo antes de qualquer execução.",
+    icon: "/images/services/icons/smartphone.svg",
     image: "/images/services/smartphone.svg",
   },
   {
@@ -18,6 +19,7 @@ const services = [
     summary: "Reparo no mesmo fluxo, com peças de alta qualidade.",
     description:
       "Substituição de display e touch com conferência de brilho, resposta ao toque, sensores e acabamento da moldura.",
+    icon: "/images/services/icons/screen.svg",
     image: "/images/services/screen.svg",
   },
   {
@@ -26,6 +28,7 @@ const services = [
     summary: "Peças selecionadas para máxima durabilidade.",
     description:
       "Teste de saúde da bateria, consumo, carregamento e calibração para entregar autonomia estável no uso diário.",
+    icon: "/images/services/icons/battery.svg",
     image: "/images/services/battery.svg",
   },
   {
@@ -34,6 +37,7 @@ const services = [
     summary: "Atendimento express com testes completos.",
     description:
       "Limpeza técnica, análise do conector e reparo quando há falha de encaixe, carga intermitente ou ausência de energia.",
+    icon: "/images/services/icons/charge.svg",
     image: "/images/services/charge.svg",
   },
   {
@@ -42,6 +46,7 @@ const services = [
     summary: "Acabamento preciso com máxima proteção.",
     description:
       "Troca ou recuperação do vidro frontal com foco em encaixe, limpeza, proteção e acabamento visual do aparelho.",
+    icon: "/images/services/icons/front-glass.svg",
     image: "/images/services/front-glass.svg",
   },
   {
@@ -50,6 +55,7 @@ const services = [
     summary: "Linha premium para manter seu aparelho como novo.",
     description:
       "Remoção controlada do vidro danificado e aplicação da nova peça com alinhamento, vedação e acabamento premium.",
+    icon: "/images/services/icons/back-glass.svg",
     image: "/images/services/back-glass.svg",
   },
   {
@@ -58,6 +64,7 @@ const services = [
     summary: "Reparo fino para som claro e sem falhas.",
     description:
       "Teste de microfone, alto-falante, chamadas, gravação e limpeza de canais para recuperar áudio claro.",
+    icon: "/images/services/icons/audio.svg",
     image: "/images/services/audio.svg",
   },
   {
@@ -66,6 +73,7 @@ const services = [
     summary: "Diagnóstico avançado em nível de placa.",
     description:
       "Análise de placa, trilhas, componentes e pontos críticos para defeitos que exigem reparo eletrônico de precisão.",
+    icon: "/images/services/icons/microsolder.svg",
     image: "/images/services/microsolder.svg",
   },
 ];
@@ -87,7 +95,9 @@ export function ServiceMenu() {
                 onClick={() => setActiveId(isActive ? "" : service.id)}
                 type="button"
               >
-                <span className={`service-icon ${service.id}`} aria-hidden="true" />
+                <span className="service-thumb" aria-hidden="true">
+                  <Image src={service.icon} alt="" width={42} height={42} />
+                </span>
                 <span>
                   <strong>{service.title}</strong>
                   <small>{service.summary}</small>

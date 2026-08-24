@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Microsolda">
+  <rect x="8" y="14" width="34" height="34" rx="5" fill="#159bff"/>
+  <rect x="19" y="25" width="12" height="12" rx="2" fill="#07111d"/>
+  <path d="M45 9 58 22 34 46l-13 4 4-13L49 13Z" fill="#f7f9fc"/>
+  <path d="M45 9 58 22" stroke="#159bff" stroke-width="4" stroke-linecap="round"/>
+</svg>
