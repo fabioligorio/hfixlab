@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { BrandMark } from "./BrandMark";
 
 export function SiteFooter() {
@@ -7,7 +8,8 @@ export function SiteFooter() {
         <div>
           <BrandMark />
           <p>
-            Tecnologia reparada com precisao. Buscamos, reparamos e entregamos.
+            Assistencia tecnica especializada. Buscamos, reparamos e
+            entregamos.
           </p>
         </div>
         <div>
@@ -17,13 +19,12 @@ export function SiteFooter() {
           <a href="/contato">Falar com a HFix</a>
         </div>
         <div>
-          <h2>Sistema</h2>
-          <a href="/app/dashboard">PWA do cliente</a>
-          <a href="/admin/dashboard">Painel interno</a>
-          <a href="/garantia">Garantias</a>
+          <h2>Links</h2>
+          <Link href="/#servicos">Servicos</Link>
+          <Link href="/#atendimento">Delivery</Link>
+          <Link href="/#acessorios">Acessorios</Link>
         </div>
       </div>
     </footer>
   );
 }
-

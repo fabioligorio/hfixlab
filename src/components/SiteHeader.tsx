@@ -1,13 +1,11 @@
 import { BrandMark } from "./BrandMark";
 
 const navItems = [
-  ["Servicos", "/servicos"],
-  ["Como funciona", "/como-funciona"],
-  ["Solicitar", "/solicitar-reparo"],
-  ["Acompanhar", "/acompanhar"],
-  ["Garantia", "/garantia"],
-  ["FAQ", "/faq"],
-  ["Contato", "/contato"],
+  ["Servicos", "/#servicos"],
+  ["Delivery", "/#atendimento"],
+  ["Acessorios", "/#acessorios"],
+  ["Garantia", "/#confianca"],
+  ["Contato", "/#contato"],
 ];
 
 export function SiteHeader() {
@@ -24,10 +22,9 @@ export function SiteHeader() {
         </nav>
         <a className="button button-primary compact" href="/solicitar-reparo">
           <span aria-hidden="true">+</span>
-          Solicitar reparo
+          Agendar reparo
         </a>
       </div>
     </header>
   );
 }
-

@@ -25,8 +25,8 @@ html {
 body {
   margin: 0;
   background:
-    radial-gradient(circle at 16% 8%, rgba(8, 103, 242, 0.24), transparent 28rem),
-    linear-gradient(145deg, #07090d 0%, #0d1118 48%, #07090d 100%);
+    radial-gradient(circle at 75% 16%, rgba(8, 103, 242, 0.2), transparent 22rem),
+    linear-gradient(145deg, #000 0%, #07090d 42%, #000 100%);
   color: var(--text-primary);
   font-family: Inter, Arial, sans-serif;
 }
@@ -142,6 +142,10 @@ button {
   padding: 56px 0 72px;
 }
 
+.express-hero {
+  border-bottom: 1px solid var(--line);
+}
+
 .hero-grid,
 .split {
   display: grid;
@@ -162,15 +166,32 @@ button {
 }
 
 .hero-copy h1 {
-  font-size: clamp(3.25rem, 8vw, 6.5rem);
+  max-width: 720px;
+  font-size: clamp(2.9rem, 6.4vw, 5.8rem);
   line-height: 0.94;
 }
 
 .hero-logo {
-  width: min(420px, 100%);
+  width: min(360px, 100%);
   height: auto;
-  margin-bottom: 28px;
+  margin-bottom: 22px;
   object-fit: contain;
+}
+
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 26px;
+}
+
+.hero-badges span {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 9px 12px;
+  color: var(--brand-silver);
+  background: rgba(255, 255, 255, 0.04);
+  font-size: 0.86rem;
 }
 
 .lead {
@@ -328,6 +349,22 @@ button {
   margin-bottom: 34px;
 }
 
+.split-heading {
+  max-width: none;
+  display: grid;
+  grid-template-columns: 1fr minmax(260px, 420px);
+  gap: 28px;
+  align-items: end;
+}
+
+.section-kicker {
+  margin-bottom: 18px;
+  color: var(--brand-highlight);
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+}
+
 .section-heading h2,
 .split h2,
 .page-hero h1 {
@@ -390,6 +427,192 @@ button {
 
 .service-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.express-service-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.express-service {
+  min-height: 118px;
+  display: grid;
+  align-content: center;
+  gap: 8px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.025);
+  transition:
+    background 180ms ease,
+    transform 180ms ease;
+}
+
+.express-service:hover {
+  background: rgba(8, 103, 242, 0.14);
+  transform: translateY(-2px);
+}
+
+.express-service strong,
+.accessory-grid strong {
+  font-size: 1.05rem;
+}
+
+.express-service span,
+.accessory-grid span {
+  color: var(--brand-highlight);
+  font-size: 0.9rem;
+}
+
+.service-note {
+  max-width: 860px;
+  margin: 28px 0;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.brand-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px 24px;
+  border-block: 1px solid var(--line);
+  padding: 20px 0;
+}
+
+.brand-strip span {
+  color: var(--brand-highlight);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+}
+
+.brand-strip strong {
+  color: var(--brand-silver);
+}
+
+.attendance-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.attendance-card {
+  min-height: 310px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 28px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.065), rgba(255, 255, 255, 0.025));
+}
+
+.attendance-card span {
+  color: var(--brand-highlight);
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+.attendance-card h3 {
+  margin: 34px 0 12px;
+  font-family: Manrope, Inter, Arial, sans-serif;
+  font-size: 1.5rem;
+}
+
+.attendance-card p {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+.attendance-card strong {
+  margin-top: auto;
+  color: var(--text-primary);
+}
+
+.accessory-copy h2,
+.contact-section h2 {
+  margin: 0;
+  font-family: Manrope, Inter, Arial, sans-serif;
+  font-size: clamp(2rem, 5vw, 3.6rem);
+  line-height: 1.02;
+}
+
+.accessory-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.accessory-grid article {
+  min-height: 108px;
+  display: grid;
+  align-content: center;
+  gap: 8px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.reason-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.reason-card {
+  min-height: 220px;
+  border-top: 1px solid var(--line);
+  padding-top: 24px;
+}
+
+.reason-card span {
+  color: var(--brand-highlight);
+  font-weight: 900;
+  font-size: 1.4rem;
+}
+
+.reason-card h3 {
+  margin: 20px 0 12px;
+  font-family: Manrope, Inter, Arial, sans-serif;
+  font-size: 1.35rem;
+}
+
+.reason-card p,
+.contact-panel p {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+.contact-panel {
+  display: grid;
+  gap: 18px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 28px;
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.contact-panel div {
+  display: grid;
+  gap: 8px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 18px;
+}
+
+.contact-panel span {
+  color: var(--brand-highlight);
+  font-size: 0.82rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.contact-panel strong {
+  font-size: 1.12rem;
 }
 
 .trust-grid {
@@ -688,8 +911,15 @@ fieldset {
   .service-grid,
   .trust-grid,
   .metric-grid,
-  .contact-grid {
+  .contact-grid,
+  .express-service-grid,
+  .reason-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .split-heading,
+  .attendance-grid {
+    grid-template-columns: 1fr;
   }
 
   .request-form {
@@ -723,7 +953,10 @@ fieldset {
   .service-grid,
   .trust-grid,
   .metric-grid,
-  .contact-grid {
+  .contact-grid,
+  .express-service-grid,
+  .reason-grid,
+  .accessory-grid {
     grid-template-columns: 1fr;
   }
 
