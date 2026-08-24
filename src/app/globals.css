@@ -48,7 +48,7 @@ button {
 }
 
 .shell {
-  width: min(1120px, calc(100% - 32px));
+  width: min(1220px, calc(100% - 32px));
   margin-inline: auto;
 }
 
@@ -710,55 +710,333 @@ button {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.service-showcase {
+  position: relative;
+  min-height: 410px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(340px, 0.82fr);
+  gap: 36px;
+  align-items: start;
+  margin-bottom: 28px;
+  overflow: hidden;
+}
+
+.service-showcase::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background:
+    linear-gradient(130deg, transparent 0 54%, rgba(8, 103, 242, 0.14) 54% 55%, transparent 55%),
+    linear-gradient(155deg, transparent 0 62%, rgba(21, 155, 255, 0.18) 62% 63%, transparent 63%);
+  opacity: 0.72;
+  pointer-events: none;
+}
+
+.service-intro {
+  position: relative;
+  z-index: 1;
+}
+
+.service-pill {
+  width: max-content;
+  max-width: 100%;
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid rgba(201, 205, 211, 0.22);
+  border-radius: 999px;
+  padding: 0 20px;
+  color: var(--brand-silver);
+  background: rgba(255, 255, 255, 0.035);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.service-pill span {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--brand-primary);
+  box-shadow: 0 0 24px var(--brand-highlight);
+}
+
+.service-intro h2 {
+  max-width: 720px;
+  margin: 28px 0 0;
+  font-family: Manrope, Inter, Arial, sans-serif;
+  font-size: clamp(2.75rem, 5.6vw, 4.55rem);
+  line-height: 0.98;
+  letter-spacing: 0;
+}
+
+.service-intro h2 strong {
+  color: var(--brand-primary);
+}
+
+.service-intro p {
+  max-width: 650px;
+  margin: 22px 0 0;
+  color: var(--brand-silver);
+  font-size: 1.08rem;
+  line-height: 1.65;
+}
+
+.service-benefits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  margin-top: 28px;
+}
+
+.service-benefits span {
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  gap: 12px;
+  align-items: center;
+  color: var(--brand-silver);
+  line-height: 1.35;
+}
+
+.service-benefits i {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(21, 155, 255, 0.58);
+  border-radius: 999px;
+  color: var(--brand-highlight);
+  font-style: normal;
+  font-weight: 900;
+}
+
+.repair-visual {
+  position: relative;
+  z-index: 1;
+  min-height: 330px;
+}
+
+.repair-visual::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background:
+    linear-gradient(130deg, transparent 0 20%, rgba(8, 103, 242, 0.18) 20% 21%, transparent 21% 46%, rgba(21, 155, 255, 0.24) 46% 47%, transparent 47%),
+    linear-gradient(25deg, transparent 0 54%, rgba(21, 155, 255, 0.14) 54% 55%, transparent 55%);
+  filter: drop-shadow(0 0 16px rgba(21, 155, 255, 0.22));
+}
+
+.repair-phone {
+  position: absolute;
+  top: -34px;
+  right: 18px;
+  width: 350px;
+  height: 202px;
+  border: 1px solid rgba(201, 205, 211, 0.24);
+  border-radius: 34px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.13), transparent 24%),
+    #11151c;
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.42);
+  transform: rotate(26deg) skewX(-10deg);
+}
+
+.repair-phone::before {
+  position: absolute;
+  content: "";
+  inset: 14px;
+  border: 1px solid rgba(201, 205, 211, 0.16);
+  border-radius: 24px;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    #07090d;
+  background-size: 32px 32px;
+}
+
+.repair-battery {
+  position: absolute;
+  left: 72px;
+  top: 36px;
+  z-index: 1;
+  width: 92px;
+  height: 122px;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #252b35, #0e1219);
+  box-shadow: inset 0 0 0 1px rgba(201, 205, 211, 0.12);
+}
+
+.repair-board {
+  position: absolute;
+  z-index: 1;
+  border: 1px solid rgba(201, 205, 211, 0.18);
+  border-radius: 10px;
+  background: linear-gradient(145deg, #252a33, #11151c);
+}
+
+.repair-board.top {
+  right: 48px;
+  top: 28px;
+  width: 118px;
+  height: 46px;
+}
+
+.repair-board.mid {
+  right: 62px;
+  top: 92px;
+  width: 94px;
+  height: 58px;
+}
+
+.repair-board.chip {
+  right: 186px;
+  top: 38px;
+  width: 38px;
+  height: 38px;
+}
+
+.repair-rails {
+  position: absolute;
+  inset: 28px;
+  z-index: 2;
+  border: 1px solid rgba(21, 155, 255, 0.22);
+  border-radius: 20px;
+}
+
+.repair-stat {
+  position: absolute;
+  right: 0;
+  bottom: 46px;
+  z-index: 2;
+  min-width: 210px;
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  column-gap: 14px;
+  align-items: center;
+  border: 1px solid rgba(21, 155, 255, 0.28);
+  border-radius: 16px;
+  padding: 20px 22px;
+  background: rgba(17, 21, 28, 0.86);
+  box-shadow: var(--shadow);
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+}
+
+.repair-stat span {
+  grid-row: span 2;
+  color: var(--brand-highlight);
+  font-size: 2rem;
+}
+
+.repair-stat strong {
+  color: var(--text-primary);
+  font-size: 1.28rem;
+}
+
+.service-mobile-copy {
+  display: none;
+}
+
 .express-service-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  border-top: 1px solid var(--line);
-  border-left: 1px solid var(--line);
+  gap: 16px;
 }
 
 .express-service {
-  min-height: 148px;
+  position: relative;
+  min-height: 164px;
   display: grid;
-  align-content: center;
-  gap: 10px;
-  border-right: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.025);
+  grid-template-columns: 60px 1fr 18px;
+  align-content: start;
+  align-items: start;
+  gap: 14px 18px;
+  border: 1px solid rgba(201, 205, 211, 0.16);
+  border-radius: 14px;
+  padding: 22px;
+  background:
+    linear-gradient(145deg, rgba(21, 155, 255, 0.08), transparent 54%),
+    rgba(17, 21, 28, 0.7);
   transition:
     background 180ms ease,
+    border-color 180ms ease,
     transform 180ms ease;
 }
 
 .express-service:hover {
   background: rgba(8, 103, 242, 0.14);
+  border-color: rgba(21, 155, 255, 0.34);
   transform: translateY(-2px);
 }
 
 .express-service strong {
-  font-size: 1.05rem;
+  align-self: end;
+  font-size: 1.08rem;
+  line-height: 1.2;
 }
 
 .express-service small {
-  color: var(--brand-highlight);
+  grid-column: 2 / 4;
+  color: var(--text-secondary);
   font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.express-service em {
+  justify-self: end;
+  align-self: end;
+  color: var(--brand-highlight);
+  font-style: normal;
+  font-size: 1.35rem;
 }
 
 .service-icon {
-  width: 48px;
-  height: 48px;
+  grid-row: span 2;
+  width: 60px;
+  height: 60px;
   display: grid;
   place-items: center;
-  border: 1px solid rgba(21, 155, 255, 0.34);
-  border-radius: 999px;
+  border: 1px solid rgba(21, 155, 255, 0.22);
+  border-radius: 15px;
   background:
     radial-gradient(circle at 34% 22%, rgba(255, 255, 255, 0.28), transparent 28%),
     linear-gradient(145deg, rgba(21, 155, 255, 0.25), rgba(8, 103, 242, 0.08));
   color: var(--text-primary);
-  font-size: 0.84rem;
+  font-size: 1.45rem;
   font-weight: 900;
   box-shadow: 0 12px 28px rgba(8, 103, 242, 0.16);
+}
+
+.service-icon::before {
+  color: var(--brand-highlight);
+}
+
+.service-icon.phone::before,
+.service-icon.screen::before,
+.service-icon.back::before {
+  content: "▯";
+}
+
+.service-icon.battery::before {
+  content: "▭";
+}
+
+.service-icon.charge::before {
+  content: "▣";
+}
+
+.service-icon.glass::before {
+  content: "▤";
+}
+
+.service-icon.audio::before {
+  content: "◖";
+}
+
+.service-icon.solder::before {
+  content: "⌁";
 }
 
 .service-note {
@@ -769,29 +1047,30 @@ button {
 }
 
 .brand-strip {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 230px repeat(7, minmax(0, 1fr));
   align-items: center;
   gap: 14px;
-  border-block: 1px solid var(--line);
-  padding: 20px 0;
+  border: 1px solid rgba(201, 205, 211, 0.16);
+  border-radius: 16px;
+  margin-top: 34px;
+  padding: 28px;
+  background: rgba(17, 21, 28, 0.58);
 }
 
 .brand-strip span {
+  border-right: 1px solid var(--line);
   color: var(--brand-highlight);
   font-size: 0.82rem;
   text-transform: uppercase;
 }
 
 .brand-logo {
-  min-height: 44px;
+  min-height: 42px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  padding: 0 18px;
-  background: rgba(255, 255, 255, 0.035);
+  padding: 0 8px;
   color: var(--brand-silver);
   font-weight: 900;
   letter-spacing: 0;
@@ -812,8 +1091,9 @@ button {
 }
 
 .brand-logo.xiaomi {
-  min-width: 54px;
-  border-color: rgba(245, 158, 11, 0.36);
+  width: 48px;
+  min-width: 48px;
+  border-radius: 8px;
   background: #f97316;
   color: white;
   font-size: 1.08rem;
@@ -821,8 +1101,8 @@ button {
 
 .brand-logo.lenovo {
   border-radius: 8px;
-  background: #e2231a;
-  color: white;
+  color: #ef4444;
+  font-size: 1.2rem;
 }
 
 .brand-logo.more {
@@ -1219,6 +1499,28 @@ fieldset {
     margin-inline: auto;
   }
 
+  .service-showcase {
+    grid-template-columns: 1fr;
+    min-height: unset;
+  }
+
+  .repair-visual {
+    min-height: 260px;
+  }
+
+  .repair-phone {
+    right: 78px;
+  }
+
+  .brand-strip {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .brand-strip span {
+    grid-column: 1 / -1;
+    border-right: 0;
+  }
+
   .step-grid,
   .service-grid,
   .trust-grid,
@@ -1231,6 +1533,42 @@ fieldset {
   .split-heading,
   .attendance-grid {
     grid-template-columns: 1fr;
+  }
+
+  .service-pill {
+    min-height: 38px;
+    padding-inline: 14px;
+    font-size: 0.66rem;
+  }
+
+  .service-intro h2 {
+    font-size: clamp(2.4rem, 12vw, 3.55rem);
+  }
+
+  .service-intro p {
+    font-size: 1rem;
+  }
+
+  .service-benefits {
+    gap: 16px;
+  }
+
+  .service-benefits span {
+    grid-template-columns: 30px 1fr;
+    font-size: 0.9rem;
+  }
+
+  .repair-visual {
+    display: none;
+  }
+
+  .express-service {
+    grid-template-columns: 58px 1fr 18px;
+  }
+
+  .brand-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 20px;
   }
 
   .request-form {

@@ -2,14 +2,14 @@ import { DeviceVisual } from "@/components/DeviceVisual";
 import { PageChrome } from "@/components/PageChrome";
 
 const repairServices = [
-  ["SM", "Conserto de Smartphones", "Diagnostico tecnico"],
-  ["TL", "Troca de Tela", "Reparo no mesmo fluxo"],
-  ["BT", "Troca de Bateria", "Pecas selecionadas"],
-  ["US", "Conector de Carga", "Atendimento express"],
-  ["VF", "Vidro Frontal", "Acabamento preciso"],
-  ["VT", "Vidro Traseiro", "Linha premium"],
-  ["AU", "Alto-falante & Mic", "Reparo fino"],
-  ["MS", "Microsolda", "Diagnostico avancado"],
+  ["phone", "Conserto de Smartphones", "Diagnostico tecnico completo e reparos especializados."],
+  ["screen", "Troca de Tela", "Reparo no mesmo fluxo, com pecas de alta qualidade."],
+  ["battery", "Troca de Bateria", "Pecas selecionadas para maxima durabilidade."],
+  ["charge", "Conector de Carga", "Atendimento express com testes completos."],
+  ["glass", "Vidro Frontal", "Acabamento preciso com maxima protecao."],
+  ["back", "Vidro Traseiro", "Linha premium para manter seu aparelho como novo."],
+  ["audio", "Alto-falante & Mic", "Reparo fino para som claro e sem falhas."],
+  ["solder", "Microsolda", "Diagnostico avancado em nivel de placa."],
 ];
 
 const brands = [
@@ -82,7 +82,41 @@ export default function Home() {
       <section className="section" id="servicos">
         <div className="shell">
           <div className="section-kicker">01 — O que a gente conserta</div>
-          <div className="section-heading split-heading">
+          <div className="service-showcase">
+            <div className="service-intro">
+              <div className="service-pill">
+                <span aria-hidden="true" />
+                Assistencia tecnica especializada
+              </div>
+              <h2>
+                Reparo completo para o seu <strong>aparelho.</strong>
+              </h2>
+              <p>
+                Trabalhamos com as principais marcas e defeitos, sempre com
+                diagnostico preciso, registro da OS e aprovacao antes do reparo.
+              </p>
+              <div className="service-benefits" aria-label="Beneficios">
+                <span><i>◇</i>Garantia<br />ate 90 dias</span>
+                <span><i>◷</i>Agilidade<br />e precisao</span>
+                <span><i>▣</i>Seguranca<br />de dados</span>
+              </div>
+            </div>
+            <div className="repair-visual" aria-hidden="true">
+              <div className="repair-phone">
+                <span className="repair-battery" />
+                <span className="repair-board top" />
+                <span className="repair-board mid" />
+                <span className="repair-board chip" />
+                <span className="repair-rails" />
+              </div>
+              <div className="repair-stat">
+                <span>⌁</span>
+                <strong>+5.000</strong>
+                reparos realizados
+              </div>
+            </div>
+          </div>
+          <div className="section-heading service-mobile-copy">
             <h2>Reparo completo para o seu aparelho.</h2>
             <p>
               Trabalhamos com as principais marcas e defeitos, sempre com
@@ -92,16 +126,13 @@ export default function Home() {
           <div className="express-service-grid">
             {repairServices.map(([icon, title, subtitle]) => (
               <a className="express-service" href="/solicitar-reparo" key={title}>
-                <span className="service-icon" aria-hidden="true">{icon}</span>
+                <span className={`service-icon ${icon}`} aria-hidden="true" />
                 <strong>{title}</strong>
                 <small>{subtitle}</small>
+                <em aria-hidden="true">→</em>
               </a>
             ))}
           </div>
-          <p className="service-note">
-            A HFix Lab atende clientes com coleta, atendimento no local e
-            laboratorio tecnico para reparos avancados.
-          </p>
           <div className="brand-strip">
             <span>{String.raw`// Trabalhamos com`}</span>
             {brands.map(([brandClass, brand]) => (
