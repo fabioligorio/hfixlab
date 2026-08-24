@@ -1,15 +1,16 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export function BrandMark() {
   return (
     <Link className="brand-mark" href="/" aria-label="HFix Lab">
-      <span className="brand-icon" aria-hidden="true">
-        H
-      </span>
-      <span>
-        <strong>HFix</strong>
-        <small>Lab</small>
-      </span>
+      <Image
+        src="/images/hfix-logo-simple.png"
+        alt="HFix Lab"
+        width={252}
+        height={128}
+        priority
+      />
     </Link>
   );
 }

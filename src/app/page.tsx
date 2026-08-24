@@ -1,4 +1,5 @@
 import { DeviceVisual } from "@/components/DeviceVisual";
+import Image from "next/image";
 import { PageChrome } from "@/components/PageChrome";
 import { ServiceGrid } from "@/components/ServiceGrid";
 import { Timeline } from "@/components/Timeline";
@@ -10,6 +11,14 @@ export default function Home() {
       <section className="hero">
         <div className="shell hero-grid">
           <div className="hero-copy">
+            <Image
+              className="hero-logo"
+              src="/images/hfix-logo-simple.png"
+              alt="HFix Lab"
+              width={504}
+              height={256}
+              priority
+            />
             <p className="eyebrow">Assistencia tecnica com coleta e rastreio</p>
             <h1>HFix Lab</h1>
             <p className="lead">
@@ -106,4 +115,3 @@ export default function Home() {
     </PageChrome>
   );
 }
-

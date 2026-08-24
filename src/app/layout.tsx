@@ -3,6 +3,7 @@ import { RegisterServiceWorker } from "@/components/RegisterServiceWorker";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://hfixlab.vercel.app"),
   title: {
     default: "HFix Lab | Assistencia tecnica com coleta e rastreio",
     template: "%s | HFix Lab",
@@ -18,6 +19,7 @@ export const metadata: Metadata = {
     siteName: "HFix Lab",
     locale: "pt_BR",
     type: "website",
+    images: ["/images/hfix-logo.png"],
   },
 };
 

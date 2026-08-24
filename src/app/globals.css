@@ -76,38 +76,13 @@ button {
 .brand-mark {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
   min-width: max-content;
 }
 
-.brand-icon {
-  width: 42px;
-  height: 42px;
-  display: grid;
-  place-items: center;
-  border: 1px solid rgba(21, 155, 255, 0.58);
-  border-radius: 12px;
-  background: linear-gradient(145deg, #0867f2, #11151c);
-  color: white;
-  font-family: Manrope, Inter, Arial, sans-serif;
-  font-weight: 800;
-}
-
-.brand-mark strong,
-.brand-mark small {
-  display: block;
-  line-height: 1;
-}
-
-.brand-mark strong {
-  font-family: Manrope, Inter, Arial, sans-serif;
-  font-size: 1.05rem;
-}
-
-.brand-mark small {
-  margin-top: 4px;
-  color: var(--text-secondary);
-  letter-spacing: 0;
+.brand-mark img {
+  width: 132px;
+  height: auto;
+  object-fit: contain;
 }
 
 .desktop-nav {
@@ -187,8 +162,15 @@ button {
 }
 
 .hero-copy h1 {
-  font-size: clamp(3.5rem, 9vw, 7.25rem);
+  font-size: clamp(3.25rem, 8vw, 6.5rem);
   line-height: 0.94;
+}
+
+.hero-logo {
+  width: min(420px, 100%);
+  height: auto;
+  margin-bottom: 28px;
+  object-fit: contain;
 }
 
 .lead {
@@ -722,6 +704,10 @@ fieldset {
 
   .site-header .button {
     display: none;
+  }
+
+  .brand-mark img {
+    width: 116px;
   }
 
   .hero {
