@@ -3,7 +3,6 @@ import { BrandMark } from "./BrandMark";
 const navItems = [
   ["Servicos", "/#servicos"],
   ["Delivery", "/#atendimento"],
-  ["Acessorios", "/#acessorios"],
   ["Garantia", "/#confianca"],
   ["Contato", "/#contato"],
 ];

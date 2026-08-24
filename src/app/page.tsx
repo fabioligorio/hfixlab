@@ -35,15 +35,6 @@ const attendance = [
   ],
 ];
 
-const accessories = [
-  ["Capas & cases", "Protecao para as principais marcas"],
-  ["Peliculas", "Vidro, privacidade e matte"],
-  ["Carregadores", "Originais e homologados"],
-  ["Cabos", "USB-C, Lightning e Micro USB"],
-  ["Fones", "Com fio e Bluetooth"],
-  ["Suportes", "Mesa, carro e bancada"],
-];
-
 const reasons = [
   ["24H", "Atendimento agil", "Triagem rapida e status claro desde a solicitacao."],
   ["90D", "Garantia no servico", "Historico da OS, testes e cobertura vinculada ao reparo."],
@@ -141,36 +132,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section" id="acessorios">
-        <div className="shell split">
-          <div className="accessory-copy">
-            <div className="section-kicker">03 — Acessorios</div>
-            <h2>Tudo que seu aparelho precisa.</h2>
-            <p>
-              Alem dos reparos, a HFix Lab pode operar com acessorios para
-              proteger, carregar e completar a experiencia do cliente.
-            </p>
-            <div className="actions">
-              <a className="button button-secondary" href="/contato">
-                <span aria-hidden="true">?</span>
-                Consultar disponibilidade
-              </a>
-            </div>
-          </div>
-          <div className="accessory-grid">
-            {accessories.map(([title, text]) => (
-              <article key={title}>
-                <strong>{title}</strong>
-                <span>· {text}</span>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="section surface-band" id="confianca">
         <div className="shell">
-          <div className="section-kicker">04 — Por que a HFix Lab</div>
+          <div className="section-kicker">03 — Por que a HFix Lab</div>
           <div className="section-heading split-heading">
             <h2>Quatro motivos para confiar no seu reparo.</h2>
             <p>
@@ -193,7 +157,7 @@ export default function Home() {
       <section className="section contact-section" id="contato">
         <div className="shell split">
           <div>
-            <div className="section-kicker">05 — Onde nos encontrar</div>
+            <div className="section-kicker">04 — Onde nos encontrar</div>
             <h2>Chame a HFix Lab e resolva sem complicacao.</h2>
             <p>
               Passe as informacoes do aparelho, escolha a melhor modalidade de
