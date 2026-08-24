@@ -35,13 +35,6 @@ const attendance = [
   ],
 ];
 
-const reasons = [
-  ["24H", "Atendimento agil", "Triagem rapida e status claro desde a solicitacao."],
-  ["90D", "Garantia no servico", "Historico da OS, testes e cobertura vinculada ao reparo."],
-  ["OS", "Rastreio completo", "Coleta, diagnostico, orcamento, reparo, testes e entrega."],
-  ["R$0", "Orcamento transparente", "Aprovacao digital antes de qualquer execucao."],
-];
-
 export default function Home() {
   return (
     <PageChrome>
@@ -132,32 +125,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section surface-band" id="confianca">
-        <div className="shell">
-          <div className="section-kicker">03 — Por que a HFix Lab</div>
-          <div className="section-heading split-heading">
-            <h2>Quatro motivos para confiar no seu reparo.</h2>
-            <p>
-              Processo objetivo, comunicacao clara e registro de cada etapa
-              importante da ordem de servico.
-            </p>
-          </div>
-          <div className="reason-grid">
-            {reasons.map(([code, title, text]) => (
-              <article key={title} className="reason-card">
-                <span>/ {code}</span>
-                <h3>{title}</h3>
-                <p>{text}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="section contact-section" id="contato">
         <div className="shell split">
           <div>
-            <div className="section-kicker">04 — Onde nos encontrar</div>
+            <div className="section-kicker">03 — Onde nos encontrar</div>
             <h2>Chame a HFix Lab e resolva sem complicacao.</h2>
             <p>
               Passe as informacoes do aparelho, escolha a melhor modalidade de

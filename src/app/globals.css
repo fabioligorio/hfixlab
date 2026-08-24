@@ -575,31 +575,6 @@ button {
   line-height: 1.02;
 }
 
-.reason-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 16px;
-}
-
-.reason-card {
-  min-height: 220px;
-  border-top: 1px solid var(--line);
-  padding-top: 24px;
-}
-
-.reason-card span {
-  color: var(--brand-highlight);
-  font-weight: 900;
-  font-size: 1.4rem;
-}
-
-.reason-card h3 {
-  margin: 20px 0 12px;
-  font-family: Manrope, Inter, Arial, sans-serif;
-  font-size: 1.35rem;
-}
-
-.reason-card p,
 .contact-panel p {
   margin: 0;
   color: var(--text-secondary);
@@ -932,8 +907,7 @@ fieldset {
   .trust-grid,
   .metric-grid,
   .contact-grid,
-  .express-service-grid,
-  .reason-grid {
+  .express-service-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -987,8 +961,7 @@ fieldset {
   .trust-grid,
   .metric-grid,
   .contact-grid,
-  .express-service-grid,
-  .reason-grid {
+  .express-service-grid {
     grid-template-columns: 1fr;
   }
 

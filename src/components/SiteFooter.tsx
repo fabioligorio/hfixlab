@@ -22,7 +22,7 @@ export function SiteFooter() {
           <h2>Links</h2>
           <Link href="/#servicos">Servicos</Link>
           <Link href="/#atendimento">Delivery</Link>
-          <Link href="/#confianca">Garantia</Link>
+          <Link href="/#contato">Contato</Link>
         </div>
       </div>
     </footer>
