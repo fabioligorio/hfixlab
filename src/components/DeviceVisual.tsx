@@ -10,9 +10,9 @@ const apps = [
   ["Notas", "notes"],
   ["Ajustes", "settings"],
   ["Maps", "maps"],
-  ["Musica", "music"],
+  ["Música", "music"],
   ["Wallet", "wallet"],
-  ["Saude", "health"],
+  ["Saúde", "health"],
 ];
 
 const dockApps = [
@@ -58,7 +58,18 @@ function IPhoneHomeScreen({
         <span>5G ▮▮▮</span>
       </div>
       {variant === "hero" ? (
-        <PhoneHeroPanel />
+        <>
+          <PhoneHeroPanel />
+          <div className="iphone-widget hero-widget">
+            <Image
+              src="/images/hfix-logo-simple.png"
+              alt=""
+              width={252}
+              height={128}
+              priority
+            />
+          </div>
+        </>
       ) : (
         <div className="iphone-widget">
           <Image

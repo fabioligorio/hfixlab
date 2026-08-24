@@ -36,7 +36,7 @@ const attendance = [
     "Agendar visita",
   ],
   [
-    "Laboratorio HFix",
+    "Laboratório HFix",
     "Para reparos complexos, microsolda, testes e garantia, o aparelho segue o processo completo.",
     "Conhecer processo",
   ],
@@ -170,7 +170,7 @@ export default function Home() {
         <div className="shell split">
           <div>
             <div className="section-kicker">Onde nos encontrar</div>
-            <h2>Chame a HFix Lab e resolva sem complicacao.</h2>
+            <h2>Chame a HFix Lab e resolva sem complicação.</h2>
             <p>
               Passe as informações do aparelho, escolha a melhor modalidade de
               atendimento e acompanhe a OS até a entrega.
@@ -178,7 +178,7 @@ export default function Home() {
           </div>
           <div className="contact-panel">
             <div>
-              <span>Endereco</span>
+              <span>Endereço</span>
               <strong>Atendimento sob agendamento</strong>
             </div>
             <div>

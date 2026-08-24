@@ -178,13 +178,9 @@ button {
 }
 
 .hero-phone-layout {
-  grid-template-columns: 1fr;
-  justify-items: center;
-  gap: 0;
-}
-
-.hero-phone-layout .hero-copy {
-  display: none;
+  grid-template-columns: minmax(0, 0.95fr) minmax(360px, 0.9fr);
+  justify-items: stretch;
+  gap: 48px;
 }
 
 .hero-copy h1,
@@ -272,8 +268,7 @@ button {
 }
 
 .hero-device {
-  width: min(100%, 620px);
-  min-height: 662px;
+  min-height: 530px;
 }
 
 .device-frame {
@@ -291,17 +286,17 @@ button {
 }
 
 .hero-device .device-frame {
-  width: min(392px, 88vw);
-  border-radius: 54px;
-  padding: 20px;
+  width: min(320px, 76vw);
+  border-radius: 42px;
+  padding: 18px;
 }
 
 .hero-device .device-speaker {
-  top: 30px;
+  top: 26px;
 }
 
 .hero-device .iphone-screen {
-  border-radius: 38px;
+  border-radius: 30px;
 }
 
 .device-speaker {
@@ -358,9 +353,8 @@ button {
 }
 
 .hero-device .iphone-home {
-  display: flex;
-  flex-direction: column;
-  padding: 42px 24px 26px;
+  display: block;
+  padding: 34px 16px 18px;
 }
 
 .iphone-home::before {
@@ -415,14 +409,18 @@ button {
 
 .phone-hero-panel {
   position: relative;
-  z-index: 3;
+  z-index: 5;
   flex: 1;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   gap: 15px;
   padding: 22px 6px 8px;
   color: var(--text-primary);
+}
+
+.hero-widget {
+  display: grid;
 }
 
 .phone-hero-panel p,
@@ -668,7 +666,7 @@ button {
 
 .hero-device .hero-app-grid,
 .hero-device .iphone-dock {
-  display: none;
+  display: grid;
 }
 
 .screen-cracked {
@@ -685,6 +683,10 @@ button {
   opacity: 0.94;
   mix-blend-mode: screen;
   pointer-events: none;
+}
+
+.hero-device .cracked-screen-photo {
+  opacity: 0.68;
 }
 
 .screen-repaired {
@@ -1616,11 +1618,12 @@ fieldset {
   }
 
   .hero-phone-layout {
-    justify-items: stretch;
+    justify-items: center;
+    gap: 0;
   }
 
   .hero-phone-layout .hero-copy {
-    display: block;
+    display: none;
   }
 
   .device-visual {
@@ -1630,38 +1633,41 @@ fieldset {
   }
 
   .hero-device {
-    min-height: 520px;
+    width: min(100%, 540px);
+    min-height: 660px;
   }
 
   .hero-device .device-frame {
-    width: min(320px, 76vw);
-    border-radius: 42px;
+    width: min(392px, 88vw);
+    border-radius: 48px;
     padding: 18px;
   }
 
   .hero-device .device-speaker {
-    top: 26px;
+    top: 28px;
   }
 
   .hero-device .iphone-screen {
-    border-radius: 30px;
+    border-radius: 34px;
   }
 
   .hero-device .iphone-home {
-    display: block;
-    padding: 34px 16px 18px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 22px 24px;
   }
 
   .phone-hero-panel {
+    display: flex;
+  }
+
+  .hero-widget,
+  .hero-device .hero-app-grid {
     display: none;
   }
 
-  .hero-device .hero-app-grid {
-    display: grid;
-  }
-
   .hero-device .iphone-dock {
-    display: grid;
+    display: none;
   }
 
   .service-showcase {
@@ -1861,6 +1867,57 @@ fieldset {
   .device-frame {
     width: min(300px, 88vw);
     padding: 14px;
+  }
+
+  .hero-device {
+    min-height: 590px;
+  }
+
+  .hero-device .device-frame {
+    width: min(318px, 88vw);
+    border-radius: 42px;
+    padding: 14px;
+  }
+
+  .hero-device .iphone-home {
+    padding: 36px 17px 20px;
+  }
+
+  .phone-hero-panel {
+    gap: 13px;
+  }
+
+  .phone-hero-panel p {
+    padding: 7px 10px;
+    font-size: 0.58rem;
+  }
+
+  .phone-hero-panel h2 {
+    font-size: clamp(2.05rem, 10vw, 2.55rem);
+  }
+
+  .phone-hero-panel span {
+    font-size: 0.84rem;
+    line-height: 1.45;
+  }
+
+  .phone-hero-actions {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .phone-hero-actions a {
+    min-height: 40px;
+    font-size: 0.78rem;
+  }
+
+  .phone-hero-badges {
+    gap: 6px;
+  }
+
+  .phone-hero-badges small {
+    padding: 7px 4px;
+    font-size: 0.66rem;
   }
 
   .iphone-screen {
